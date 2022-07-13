@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+import { getRecipe } from '../actions/index'
+import { fetchRecipe } from './apis/RecipeApi'
 
 function App () {
-  const fruits = useSelector(state => state.fruits)
+  const recipe = useSelector(state => state.recipe)
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(fetchFruits())
+    dispatch(fetchRecipe())
   }, [])
 
   return (
