@@ -6,7 +6,7 @@ const db = require('../db/dbFuncs/recipes')
 const router = express.Router()
 
 router.get('/' ,(req,res)=>{
-  db.getAllRecipe()
+  db.getRecipes()
   .then((recipe)=>{
     res.json(recipe)
   })

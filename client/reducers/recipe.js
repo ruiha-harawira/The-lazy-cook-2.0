@@ -1,7 +1,7 @@
 import { RECEIVE_RECIPE } from '../actions/index'
 
 const recipe=(state =[], action) => {
-  const {type,payload} = action
+  const { type,payload } = action
 
   switch (type) {
     case RECEIVE_RECIPE:

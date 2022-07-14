@@ -1,9 +1,10 @@
-import { fetchRecipe } from '../components/apis/RecipeApi'
+import { fetchRecipe } from '../apis/RecipeApi'
 
 //vars
-const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
+export const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
 
 export function receiveRecipe (recipeArr) {
+  
   return {
     type: RECEIVE_RECIPE,
     payload:recipeArr
