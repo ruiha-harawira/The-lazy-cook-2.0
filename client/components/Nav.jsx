@@ -8,6 +8,7 @@ function Nav () {
         <Link to="/">Home</Link>
         <p>hi</p>
         <Link to="/all">All Recipes</Link>
+        <Link to="/add">Add Recipe</Link>
       </div>
     </>
   )

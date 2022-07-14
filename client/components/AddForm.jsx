@@ -36,11 +36,8 @@ const handleChange = (e) => {
 }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}
-
-    </div>
-  )
+   
+    )
 }
 
 export default AddForm
