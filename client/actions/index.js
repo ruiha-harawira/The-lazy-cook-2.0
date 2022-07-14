@@ -1,20 +1,23 @@
-import { getFruits } from '../apis/fruits'
+import { fetchRecipe } from '../components/apis/RecipeApi'
 
-export const SET_FRUITS = 'SET_FRUITS'
+//vars
+const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
 
-export function setFruits (fruits) {
+export function receiveRecipe (recipeArr) {
   return {
-    type: SET_FRUITS,
-    fruits
+    type: RECEIVE_RECIPE,
+    payload:recipeArr
   }
 }
 
-export function fetchFruits () {
-  return dispatch => {
-    return getFruits()
-      .then(fruits => {
-        dispatch(setFruits(fruits))
-        return null
-      })
+// THUNKS
+
+export function getRecipe() {
+  return(dispatch) => {
+   fetchRecipe()
+    .then((recipeArr) => {
+      dispatch(receiveRecipe(recipeArr))
+    })
+    .catch(err=> console.log(err.message))
   }
 }
