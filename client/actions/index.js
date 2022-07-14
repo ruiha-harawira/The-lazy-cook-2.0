@@ -7,7 +7,7 @@ export function receiveRecipe (recipeArr) {
   
   return {
     type: RECEIVE_RECIPE,
-    payload:recipeArr
+    payload: recipeArr
   }
 }
 

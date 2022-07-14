@@ -1,15 +1,13 @@
 import React from 'react'
 
-
-function OneRecipe({data}) {
-
+function OneRecipe ({ data }) {
   return (
     <>
-   <p>{data.name}</p>
-   <p>{data.description}</p>
-   <p>{data.ingredients}</p>
-   <img src={data.img} />
-  </>
+      <p>{data.name}</p>
+      <p>{data.description}</p>
+      <p>{data.ingredients}</p>
+      <img src={data.img} />
+    </>
   )
 }
 
