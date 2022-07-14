@@ -2,9 +2,9 @@ import { fetchRecipe, addRecipe } from '../apis/RecipeApi'
 
 
 //vars
-const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
-const REQUEST_RECIPE = 'REQUEST_RECIPE'
-const ADD_RECIPE = 'ADD_RECIPE'
+export const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
+export const REQUEST_RECIPE = 'REQUEST_RECIPE'
+export const ADD_RECIPE = 'ADD_RECIPE'
 
 export function receiveRecipe (recipeArr) {
   

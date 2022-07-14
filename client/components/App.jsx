@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getRecipe } from '../actions/index'
 import AllRecipes from './AllRecipes'
+import AddForm from './AddForm'
 
 
 
@@ -19,6 +20,7 @@ function App () {
   return (
     <div>
     <AllRecipes />
+
      </div>
   )
 

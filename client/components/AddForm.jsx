@@ -50,7 +50,7 @@ const handleChange = (e) => {
         <input id='ingredients' name='ingredients' type='text' value={formData.ingredients} onChange={handleChange}/>
         <br/>
         <label htmlFor='description'>Description:</label>
-        <input id='name' name='name' type='text' value={formData.description} onChange={handleChange}/>
+        <input id='description' name='description' type='text' value={formData.description} onChange={handleChange}/>
         <br/>
         <label htmlFor='img'>Upload image:</label>
         <input type="file" id="myFile" name="filename"/>
