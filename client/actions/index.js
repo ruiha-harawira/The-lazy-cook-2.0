@@ -1,8 +1,10 @@
-import {fetchRecipe } from '../components/apis/RecipeApi'
+import { fetchRecipe } from '../components/apis/RecipeApi'
 
-export const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
+//vars
+const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
 
 export function receiveRecipe (category) {
+  console.log(category)
   return {
     type: RECEIVE_RECIPE,
     payload: category, 

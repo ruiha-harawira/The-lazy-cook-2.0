@@ -1,8 +1,6 @@
 import { RECEIVE_RECIPE } from '../actions/index'
 
-const initialState = []
-
-const reducer = (state = initialState, action) => {
+const recipe= (state = [], action) => {
   const {type,payload} = action
   switch (type) {
     case RECEIVE_RECIPE:
@@ -13,4 +11,8 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-export default reducer
+export default recipe
+
+
+
+// state.filter((recipe) => recipe.category !==payload) 
