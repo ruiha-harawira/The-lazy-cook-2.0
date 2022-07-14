@@ -2,11 +2,11 @@ const connection = require('./connection')
 
 
 function getCategory(category, db = connection) {
-  return db('recipe').where('category',category).select()
+  return db('recipes').where('category',category).select()
 }
 
 function getAllRecipe(db=connection){
-  return db('recipe').select()
+  return db('recipes').select()
 }
 
 module.exports = {

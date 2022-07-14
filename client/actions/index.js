@@ -3,21 +3,20 @@ import { fetchRecipe } from '../components/apis/RecipeApi'
 //vars
 const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
 
-export function receiveRecipe (category) {
-  console.log(category)
+export function receiveRecipe (recipeArr) {
   return {
     type: RECEIVE_RECIPE,
-    payload: category, 
+    payload:recipeArr
   }
 }
 
 // THUNKS
 
-export function getRecipe(category) {
+export function getRecipe() {
   return(dispatch) => {
-   fetchRecipe(category)
-    .then(() => {
-      dispatch(receiveRecipe(category))
+   fetchRecipe()
+    .then((recipeArr) => {
+      dispatch(receiveRecipe(recipeArr))
     })
     .catch(err=> console.log(err.message))
   }
