@@ -1,27 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getRecipe } from '../actions/index'
+import React, { useEffect } from 'react'
+// import { useDispatch } from 'react-redux'
+import { Routes, Route } from 'react-router-dom'
+
+// import { getRecipe } from '../actions/index'
 import AllRecipes from './AllRecipes'
-
-
+import Nav from './Nav'
 
 function App () {
-  // const state = useSelector(state => state.recipe)
-
-  // console.log(state)
-  // const dispatch = useDispatch()
-
-
-  // useEffect(()=>{
-  //   return dispatch(getRecipe())
-  // }, [])
-
   return (
     <div>
-    <AllRecipes />
-     </div>
+      <h2>Good Heavens!</h2>
+      <Nav />
+      <Routes>
+        <Route path="/all" element={<AllRecipes />} />
+      </Routes>
+    </div>
   )
-
 }
 
 export default App
