@@ -1,29 +1,15 @@
-// import React,{useEffect,useState} from 'react'
-// import {getRecipe} from '../actions/index'
-// import {useSelector ,seDispatch, useDispatch} from 'react-redux'
+import React from 'react'
 
 
+function OneRecipe({data}) {
 
+  return (
+    <>
+   <p>{data.name}</p>
+   <p>{data.description}</p>
+   <img src={data.img} />
+  </>
+  )
+}
 
-// function OneRecipe() {
-
-//   const dispatch = useDispatch()
-
-//   useEffect(()=>{
-//     return dispatch(getRecipe(category))
-//   })
-
-//   const state = useSelector(state => state.recipe)
-//   return (
-//    <>
-//     <ul>
-//     {state.map((recipe)=>{
-//       return recipe
-//     })}
-
-//     </ul>
-//   </>
-//   )
-// }
-
-// export default OneRecipe
+export default OneRecipe
