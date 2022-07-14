@@ -1,14 +1,31 @@
 const express = require('express')
-const res = require('express/lib/response')
-const router = express.Router()
+
+
 const db = require('../db/dbFuncs/recipes')
 
-router.get('/', (req, res) => {
-  db.getRecipes()
-    .then((allRecipes) => res.json(allRecipes))
-    .catch((err) => res.status(500).send(err.message))
+const router = express.Router()
+
+router.get('/' ,(req,res)=>{
+  db.getAllRecipe()
+  .then((recipe)=>{
+    res.json(recipe)
   })
-    
+  .catch(err => {
+    console.log(err)
+    res.status(500).json({ message: 'Somthing went wrong' })
+  })
+})
 
+// router.get('/:category',(req,res)=>{
+//   const category = req.params.category
+//   db.getCategory(category)
+//   .then((category)=>{
+//     res.json(category)
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.status(500).json({ message: 'Somthing went wrong' })
+//   })
 
+// })
 module.exports = router
