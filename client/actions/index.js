@@ -2,9 +2,9 @@ import { fetchRecipe, addRecipe } from '../apis/RecipeApi'
 
 
 //vars
-export const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
-export const REQUEST_RECIPE = 'REQUEST_RECIPE'
-export const ADD_RECIPE = 'ADD_RECIPE'
+const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
+const REQUEST_RECIPE = 'REQUEST_RECIPE'
+const ADD_RECIPE = 'ADD_RECIPE'
 
 export function receiveRecipe (recipeArr) {
   
@@ -18,6 +18,7 @@ export function requestAllRecipes() {
   return {
     type: REQUEST_ALL_RECIPES
   }
+}
 
 
 export function postRecipe(recipe) {
@@ -48,5 +49,4 @@ export function addNewRecipe(recipe) {
     return null 
   })
   .catch(err=> console.log(err.message))
-}
-}
+}}
