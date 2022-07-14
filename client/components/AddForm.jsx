@@ -3,8 +3,10 @@ import React, { useState } from 'react'
 function AddForm(props) {
 const [formData, setFormData] = useState({
   name:'',
-  // RADIO BUTTONS
+  category:'',
+  ingredients:'',
   description:'',
+  img:'',
 })
 
 const handleSubmit = (e) => {
@@ -13,18 +15,14 @@ const handleSubmit = (e) => {
 
   setFormData({
     name:'',
-    //RADIO BUTTONS
+    category:'',
+    ingredients:'',
     description: '',
+    img:'',
   })
 
-  addNewRecipe(newRecipe)
+  dispatch(addNewRecipe(newRecipe))
 
-  .then(() =>{
-
-    props.refreshRecipes()
-  }).catch((err) => {
-    console.log(err)
-  })
 }
 
 const handleChange = (e) => {
@@ -36,10 +34,36 @@ const handleChange = (e) => {
 }
 
   return (
-    <div>
+    <>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor='name'>Name:</label>
+        <input id='name' name='name' type='text' value={formData.name} onChange={handleChange}/>
+        <br/>
+        <label for='vegetable'>Vegetable</label>
+        <input type='radio' id='vegetable' name='category' value={formData.category} onChange={handleChange}/>
+        <label for='protein'>Protein</label>
+        <input type='radio' id='protein' name='category' value={formData.category} onChange={handleChange}/>
+        <label for='grains'>Grains</label>
+        <input type='radio' id='grains' name='category' value={formData.category} onChange={handleChange}/>
+        <br/>
+        <label htmlFor='ingredients'>Ingredients:</label>
+        <input id='ingredients' name='ingredients' type='text' value={formData.ingredients} onChange={handleChange}/>
+        <br/>
+        <label htmlFor='description'>Description:</label>
+        <input id='name' name='name' type='text' value={formData.description} onChange={handleChange}/>
+        <br/>
+        <label htmlFor='img'>Upload image:</label>
+        <input type="file" id="myFile" name="filename"/>
 
 
-    </div>
+        <br/>
+        <button>Send</button>
+
+        
+      </form>
+
+
+    </>
   )
 }
 
