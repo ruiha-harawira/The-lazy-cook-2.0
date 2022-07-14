@@ -7,6 +7,7 @@ function OneRecipe({data}) {
     <>
    <p>{data.name}</p>
    <p>{data.description}</p>
+   <p>{data.ingredients}</p>
    <img src={data.img} />
   </>
   )
