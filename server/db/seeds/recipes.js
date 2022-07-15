@@ -9,7 +9,7 @@ exports.seed = function (knex) {
           id: 1,
           name: 'Teriyaki chicken',
           description:
-            'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Serve with rice, if desired! Enjoy!',
+            'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Enjoy!',
           ingredients: JSON.stringify([
             '910 g chicken thighs sliced into chunks',
             '1 cup sauce',
@@ -23,7 +23,7 @@ exports.seed = function (knex) {
           id: 2,
           name: 'Mac & Cheese',
           description:
-            'In a large pot, bring the milk to a boil.Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
+            'In a large pot, bring the milk to a boil. Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
           ingredients: JSON.stringify([
             '5 cups milk',
             '455g elbow macaroni',
@@ -55,7 +55,7 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             '1 kg Boston  pork roast',
             '2 cans or bottles root beer',
-            '255 g vvinegar-based barbecue sauce (or your favorite barbecue sauce)'
+            '255 g vinegar-based barbecue sauce (or your favorite barbecue sauce)'
           ]),
           img: '/images/pulled-Pork.jpg',
           category: 'Protein'
@@ -79,7 +79,7 @@ exports.seed = function (knex) {
           id: 6,
           name: 'Fried rice',
           description:
-            'Add oil to a wide skillet and saute the onions until translucentLower the flame and crack 3 eggs one at a time into the skillet with the sauted onions Add salt and scramble the eggs slowly for few seconds. And once the eggs are 50 % done then immediately add the cooked and cold rice and keep mixing along with eggs. This will result in the scrambling of the eggs and also mixing it well with the rice Add pepper and finely chopped spring onions and mix well until all rice is nice and hot. Serve hot with favourite side dish or sauces...',
+            'Add oil to a wide skillet and saute the onions until translucent. Lower the flame and crack 3 eggs one at a time into the skillet with the sauted onions Add salt and scramble the eggs slowly for few seconds. And once the eggs are 50 % done then immediately add the cooked and cold rice and keep mixing along with eggs. This will result in the scrambling of the eggs and also mixing it well with the rice Add pepper and finely chopped spring onions and mix well until all rice is nice and hot. Serve hot. Enjoy!',
           ingredients: JSON.stringify([
             'Onion: 1 Medium chopped',
             'Eggs: 3',
@@ -116,7 +116,124 @@ exports.seed = function (knex) {
           id: 9,
           name: 'Carrot salad',
           description:
-            'Toss carrots,  and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
+            'Toss carrots, and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
+          ingredients: JSON.stringify([
+            'carrots',
+            'red cabbage',
+            'salad dressing'
+          ]),
+          img: '/images/carrot-salad.jpg',
+          category: 'Vegetables'
+        },
+        {
+          id: 1,
+          name: 'Teriyaki chicken',
+          description:
+            'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Enjoy!',
+          ingredients: JSON.stringify([
+            '910 g chicken thighs sliced into chunks',
+            '1 cup sauce',
+            '½ cup brown sugar'
+          ]),
+          img: '/images/teriyaki-chicken.jpg',
+          category: 'Protein'
+        },
+        {
+          id: 1,
+          name: 'Teriyaki chicken',
+          description:
+            'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Enjoy!',
+          ingredients: JSON.stringify([
+            '910 g chicken thighs sliced into chunks',
+            '1 cup sauce',
+            '½ cup brown sugar'
+          ]),
+          img: '/images/teriyaki-chicken.jpg',
+          category: 'Protein'
+        },
+        {
+          id: 1,
+          name: 'Teriyaki chicken',
+          description:
+            'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Enjoy!',
+          ingredients: JSON.stringify([
+            '910 g chicken thighs sliced into chunks',
+            '1 cup sauce',
+            '½ cup brown sugar'
+          ]),
+          img: '/images/teriyaki-chicken.jpg',
+          category: 'Protein'
+        },
+        {
+          id: 2,
+          name: 'Mac & Cheese',
+          description:
+            'In a large pot, bring the milk to a boil. Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
+          ingredients: JSON.stringify([
+            '5 cups milk',
+            '455g elbow macaroni',
+            'dry 2 cups shredded cheddar cheese'
+          ]),
+          img: '/images/macncheese.jpg',
+          category: 'Grains'
+        },
+        {
+          id: 2,
+          name: 'Mac & Cheese',
+          description:
+            'In a large pot, bring the milk to a boil. Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
+          ingredients: JSON.stringify([
+            '5 cups milk',
+            '455g elbow macaroni',
+            'dry 2 cups shredded cheddar cheese'
+          ]),
+          img: '/images/macncheese.jpg',
+          category: 'Grains'
+        },
+        {
+          id: 2,
+          name: 'Mac & Cheese',
+          description:
+            'In a large pot, bring the milk to a boil. Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
+          ingredients: JSON.stringify([
+            '5 cups milk',
+            '455g elbow macaroni',
+            'dry 2 cups shredded cheddar cheese'
+          ]),
+          img: '/images/macncheese.jpg',
+          category: 'Grains'
+        },
+        {
+          id: 9,
+          name: 'Carrot salad',
+          description:
+            'Toss carrots, and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
+          ingredients: JSON.stringify([
+            'carrots',
+            'red cabbage',
+            'salad dressing'
+          ]),
+          img: '/images/carrot-salad.jpg',
+          category: 'Vegetables'
+        },
+        {
+          id: 9,
+          name: 'Carrot salad',
+          description:
+            'Toss carrots, and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
+          ingredients: JSON.stringify([
+            'carrots',
+            'red cabbage',
+            'salad dressing'
+          ]),
+          img: '/images/carrot-salad.jpg',
+          category: 'Vegetables'
+        },
+        {
+          id: 9,
+          name: 'Carrot salad',
+          description:
+            'Toss carrots, and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
           ingredients: JSON.stringify([
             'carrots',
             'red cabbage',
