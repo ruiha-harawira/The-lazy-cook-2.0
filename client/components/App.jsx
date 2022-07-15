@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <h2>Good Heavens!</h2>
-      <Nav />
+      <Nav className='nav'/>
       <Routes>
         <Route path="/all" element={<AllRecipes />} />
       
