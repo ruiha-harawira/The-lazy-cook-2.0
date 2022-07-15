@@ -13,10 +13,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             '910 g chicken thighs sliced into chunks',
             '1 cup sauce',
-            '½ cup brown sugar'
+            '½ cup brown sugar',
           ]),
           img: '/images/teriyaki-chicken.jpg',
-          category: 'Protein'
+          category: 'Protein',
         },
 
         {
@@ -27,10 +27,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             '5 cups milk',
             '455g elbow macaroni',
-            'dry 2 cups shredded cheddar cheese'
+            'dry 2 cups shredded cheddar cheese',
           ]),
           img: '/images/macncheese.jpg',
-          category: 'Grains'
+          category: 'Grains',
         },
 
         {
@@ -41,10 +41,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             '4 large potatoes',
             '2 eggs',
-            '1 tin of baked beans'
+            '1 tin of baked beans',
           ]),
           img: '/images/eggs-and-chips.jpg',
-          category: 'Protein'
+          category: 'Protein',
         },
 
         {
@@ -55,10 +55,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             '1 kg Boston  pork roast',
             '2 cans or bottles root beer',
-            '255 g vinegar-based barbecue sauce (or your favorite barbecue sauce)'
+            '255 g vinegar-based barbecue sauce (or your favorite barbecue sauce)',
           ]),
           img: '/images/pulled-Pork.jpg',
-          category: 'Protein'
+          category: 'Protein',
         },
 
         {
@@ -69,10 +69,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             'rice',
             'sushi seaweed',
-            'selected filler capsicum or pizza'
+            'selected filler capsicum or pizza',
           ]),
           img: '/images/sushi.jpg',
-          category: 'Grains'
+          category: 'Grains',
         },
 
         {
@@ -83,10 +83,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             'Onion: 1 Medium chopped',
             'Eggs: 3',
-            'Spring Onions with leaves; 1/3 to 1/2 cup'
+            'Spring Onions with leaves; 1/3 to 1/2 cup',
           ]),
           img: '/images/fried-rice.JPG',
-          category: 'Grains'
+          category: 'Grains',
         },
 
         {
@@ -97,10 +97,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             'noodles',
             'water',
-            'noodles boiling water'
+            'noodles boiling water',
           ]),
           img: '/images/noodles.jpg',
-          category: 'Vegetables'
+          category: 'Vegetables',
         },
 
         {
@@ -109,7 +109,7 @@ exports.seed = function (knex) {
           description: 'eat apple.',
           ingredients: JSON.stringify(['apple']),
           img: '/images/apple.jpg',
-          category: 'Vegetables'
+          category: 'Vegetables',
         },
 
         {
@@ -120,48 +120,46 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             'carrots',
             'red cabbage',
-            'salad dressing'
+            'salad dressing',
           ]),
           img: '/images/carrot-salad.jpg',
-          category: 'Vegetables'
+          category: 'Vegetables',
         },
+
         {
           id: 10,
-          name: 'Teriyaki chicken',
+          name: 'Burger',
           description:
-            'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Enjoy!',
-          ingredients: JSON.stringify([
-            '910 g chicken thighs sliced into chunks',
-            '1 cup sauce',
-            '½ cup brown sugar'
-          ]),
-          img: '/images/teriyaki-chicken.jpg',
-          category: 'Protein'
+            'Start by cooking the patty in a frying pan until a preffered amount of cooking has been done, then place the patty inside the bun with ketchup inside. Enjoy!',
+          ingredients: JSON.stringify(['ketchup', 'burger bun', 'burger']),
+          img: '/images/VeggieBurger.jpg',
+          category: 'Protein',
         },
+
         {
           id: 11,
-          name: 'Teriyaki chicken',
+          name: 'Broiled Thai Sweet Chili Salmon',
           description:
-            'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Enjoy!',
+            'Fristly cook the salmon in frying pan at some sort of heat, then add thai sweet chile sauce and green onions ontop. Enjoy!',
           ingredients: JSON.stringify([
-            '910 g chicken thighs sliced into chunks',
-            '1 cup sauce',
-            '½ cup brown sugar'
+            '6 x 6 oz wild salmon fillets skin on or off',
+            '1/2 cup + 2 tbsp Thai sweet chili sauce',
+            '2 – 3 tbsp green onions finely chopped',
           ]),
-          img: '/images/teriyaki-chicken.jpg',
-          category: 'Protein'
+          img: '/images/salmon.jpg',
+          category: 'Protein',
         },
         {
           id: 12,
-          name: 'Teriyaki chicken',
+          name: 'Curried beans on toast',
           description:
-            'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Enjoy!',
+            'Place one tin of beans in the microwave for 2 minutes, and 2 slices of toast in the breader, when the tin starts to spark in the microwave wait a further 20 seconds then remove the beans and empty into a bowl, and add 1 tablespoon of curry powder and mix well, then butter and cut the toast into your preffered size and place on a plate, then covee the toast with the beans. Enjoy!',
           ingredients: JSON.stringify([
-            '910 g chicken thighs sliced into chunks',
-            '1 cup sauce',
-            '½ cup brown sugar'
+            '1 tin of baked beans',
+            'curry powder',
+            '2 slices of bread'
           ]),
-          img: '/images/teriyaki-chicken.jpg',
+          img: '/images/beansOnToast.jpg',
           category: 'Protein'
         },
         {
@@ -172,10 +170,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             '5 cups milk',
             '455g elbow macaroni',
-            'dry 2 cups shredded cheddar cheese'
+            'dry 2 cups shredded cheddar cheese',
           ]),
           img: '/images/macncheese.jpg',
-          category: 'Grains'
+          category: 'Grains',
         },
         {
           id: 14,
@@ -185,10 +183,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             '5 cups milk',
             '455g elbow macaroni',
-            'dry 2 cups shredded cheddar cheese'
+            'dry 2 cups shredded cheddar cheese',
           ]),
           img: '/images/macncheese.jpg',
-          category: 'Grains'
+          category: 'Grains',
         },
         {
           id: 15,
@@ -198,10 +196,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             '5 cups milk',
             '455g elbow macaroni',
-            'dry 2 cups shredded cheddar cheese'
+            'dry 2 cups shredded cheddar cheese',
           ]),
           img: '/images/macncheese.jpg',
-          category: 'Grains'
+          category: 'Grains',
         },
         {
           id: 16,
@@ -211,10 +209,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             'carrots',
             'red cabbage',
-            'salad dressing'
+            'salad dressing',
           ]),
           img: '/images/carrot-salad.jpg',
-          category: 'Vegetables'
+          category: 'Vegetables',
         },
         {
           id: 17,
@@ -224,10 +222,10 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             'carrots',
             'red cabbage',
-            'salad dressing'
+            'salad dressing',
           ]),
           img: '/images/carrot-salad.jpg',
-          category: 'Vegetables'
+          category: 'Vegetables',
         },
         {
           id: 18,
@@ -237,11 +235,11 @@ exports.seed = function (knex) {
           ingredients: JSON.stringify([
             'carrots',
             'red cabbage',
-            'salad dressing'
+            'salad dressing',
           ]),
           img: '/images/carrot-salad.jpg',
-          category: 'Vegetables'
-        }
+          category: 'Vegetables',
+        },
       ])
     })
 }
