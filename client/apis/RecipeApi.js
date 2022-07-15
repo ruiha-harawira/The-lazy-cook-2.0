@@ -13,3 +13,15 @@ export function fetchRecipe () {
 //     return res.body
 //    })
 // }
+export function addRecipe(recipe){
+return request 
+.post('/api/addRecipe')
+.send(recipe)
+.then((res) => {
+  return res.body
+})
+.catch((err) => {
+  const errMsg = `Failed to post resipe: ${err.message}`
+  console.warn(errMsg)
+
+})}
