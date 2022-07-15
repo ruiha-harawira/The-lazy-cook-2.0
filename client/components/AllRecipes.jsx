@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getRecipe } from '../actions/index'
 import OneRecipe from './OneRecipe'
 
-function AllRecipes ({data}) {
+function AllRecipes ({ data }) {
   const recipes = useSelector((state) => state.recipe)
 
   const dispatch = useDispatch()
@@ -16,7 +16,6 @@ function AllRecipes ({data}) {
     <>
       <h2>Recipes</h2>
 
-
       {/* <ul>
         {recipes.map(recipe => (
           <li key={recipe.id}>
@@ -24,7 +23,6 @@ function AllRecipes ({data}) {
           </li>
         ))}
       </ul> */}
-
 
       {recipes.map((recipe) => (
         <OneRecipe data={recipe} key={recipe.id} />

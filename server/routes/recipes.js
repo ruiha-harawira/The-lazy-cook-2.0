@@ -1,6 +1,4 @@
 const express = require('express')
-
-
 const db = require('../db/dbFuncs/recipes')
 
 const router = express.Router()
