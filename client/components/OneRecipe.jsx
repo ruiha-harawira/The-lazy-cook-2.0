@@ -5,10 +5,15 @@ function OneRecipe({data}) {
 
   return (
     <>
-   <p>{data.name}</p>
-   <p>{data.description}</p>
-   <p>{data.ingredients}</p>
-   <img src={data.img} />
+    {data 
+    ? <div> 
+        <p>{data.name}</p>
+        <p>{data.description}</p>
+        <p>{data.ingredients}</p>
+        <img src={data.img} />
+    </div>
+    : null}
+  
   </>
   )
 }
