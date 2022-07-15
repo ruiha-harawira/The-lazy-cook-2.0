@@ -1,10 +1,11 @@
 import React from 'react'
-import OneRecipe from './OneRecipe'
 import styled from 'styled-components'
 import { useSelector } from 'react-redux'
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/splide.min.css'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/react-splide/css'
 import {Link} from 'react-router-dom'
+
+import OneRecipe from './OneRecipe'
 
 function Home() {
 const recipes = useSelector((state) => state.recipe)
@@ -29,33 +30,30 @@ const recipes = useSelector((state) => state.recipe)
     <section>
       <div className='veggies'>
         <Wrapper>
-          <h3><a id='veg'></a>Vege</h3>
+          <h3>Vege</h3>
           <Splide
-          options={{
-            perPage:3,
-            arrow:false,
-            pagination:false,
-            drag:"free",
-            gap:"5rem",
-          }}>
+            options={{
+              perPage:3,
+              arrow:true,
+              pagination:false,
+              drag:"free",
+              gap:"5rem",
+            }}>
             {recipes.filter(recipe =>recipe.category==="Vegetables").map((recipeVege) =>{
               return (
               <SplideSlide key = {recipeVege.id}>
                 <Card>
                   <Link to={'/recipe/' +recipeVege.id}>
                   <div className='front'>
-                    
                     <img src = {recipeVege.img} alt={recipeVege.name}/>
-                    
-                 
                   </div>
-                  
                   <div className='back'>
                       <p>{recipeVege.name}</p>
                       <p>{recipeVege.description}</p>
-                    </div> </Link>
+                  </div>
+                  </Link>
                  </Card>
-              </SplideSlide>
+               </SplideSlide>
               )})}
 
           </Splide>
@@ -70,7 +68,12 @@ const recipes = useSelector((state) => state.recipe)
  
 }
 const Wrapper = styled.div`
-margin: 4rem 0rem;`;
+margin: 4rem 0rem;
+.splide__list{
+  display:flex;
+
+}
+`;
 
 const Card = styled.div`
 min-height:25rem;
@@ -94,9 +97,11 @@ position:relative;
  };
   
   .back{
-  border-radius:3rem;
+  border-radius:2rem;
+
   background-color:blue;
   position:absolute;
+  
   left:0%;
   color:white;
   width:100%;
@@ -109,7 +114,7 @@ position:relative;
   justify-content:center;
   align-item:flex-end;
   text-decoration: none;
-  background-color:#dba76b;
+  background-color:dark;
  }
 `;
 // const CardText = styled.div`

@@ -21,7 +21,7 @@ function App() {
       <Nav className="nav" />
       <Routes>
         <Route path="/" element={<Home data={recipes} />} />
-        <Route path="/allrecipes" element={<AllRecipes />} />
+        <Route path="/all" element={<AllRecipes />} />
         <Route path="/add" element={<AddForm />} />
       </Routes>
     </>

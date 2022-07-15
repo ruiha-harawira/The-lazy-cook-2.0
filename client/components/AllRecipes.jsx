@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getRecipe } from '../actions/index'
 import OneRecipe from './OneRecipe'
 
 function AllRecipes ({ data }) {
