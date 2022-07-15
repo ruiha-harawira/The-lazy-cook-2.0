@@ -126,7 +126,7 @@ exports.seed = function (knex) {
           category: 'Vegetables'
         },
         {
-          id: 1,
+          id: 10,
           name: 'Teriyaki chicken',
           description:
             'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Enjoy!',
@@ -139,7 +139,7 @@ exports.seed = function (knex) {
           category: 'Protein'
         },
         {
-          id: 1,
+          id: 11,
           name: 'Teriyaki chicken',
           description:
             'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Enjoy!',
@@ -152,7 +152,7 @@ exports.seed = function (knex) {
           category: 'Protein'
         },
         {
-          id: 1,
+          id: 12,
           name: 'Teriyaki chicken',
           description:
             'Sear the chicken thighs evenly in a pan, then flip. Add the soy sauce and brown sugar, stirring and bringing to a boil. Stir until the sauce has reduced and evenly glazes the chicken. Enjoy!',
@@ -165,7 +165,7 @@ exports.seed = function (knex) {
           category: 'Protein'
         },
         {
-          id: 2,
+          id: 13,
           name: 'Mac & Cheese',
           description:
             'In a large pot, bring the milk to a boil. Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
@@ -178,7 +178,7 @@ exports.seed = function (knex) {
           category: 'Grains'
         },
         {
-          id: 2,
+          id: 14,
           name: 'Mac & Cheese',
           description:
             'In a large pot, bring the milk to a boil. Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
@@ -191,7 +191,7 @@ exports.seed = function (knex) {
           category: 'Grains'
         },
         {
-          id: 2,
+          id: 15,
           name: 'Mac & Cheese',
           description:
             'In a large pot, bring the milk to a boil. Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
@@ -204,7 +204,7 @@ exports.seed = function (knex) {
           category: 'Grains'
         },
         {
-          id: 9,
+          id: 16,
           name: 'Carrot salad',
           description:
             'Toss carrots, and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
@@ -217,7 +217,7 @@ exports.seed = function (knex) {
           category: 'Vegetables'
         },
         {
-          id: 9,
+          id: 17,
           name: 'Carrot salad',
           description:
             'Toss carrots, and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
@@ -230,7 +230,7 @@ exports.seed = function (knex) {
           category: 'Vegetables'
         },
         {
-          id: 9,
+          id: 18,
           name: 'Carrot salad',
           description:
             'Toss carrots, and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
