@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import OneRecipe from './OneRecipe'
 
 function AllRecipes ({ data }) {
@@ -7,13 +7,12 @@ function AllRecipes ({ data }) {
 
   return (
     <>
-    <h2>Recipes</h2>
-    <div className='allRecipes'>
-      {recipes.map(recipe => <OneRecipe data={recipe} key={recipe.id} />)}
+      <h2>Recipes</h2>
+      <div className='allRecipes'>
+        {recipes.map(recipe => <OneRecipe data={recipe} key={recipe.id} />)}
 
-    </div>
+      </div>
 
-  
     </>
   )
 }
