@@ -1,4 +1,4 @@
-import { RECEIVE_RECIPE } from '../actions/index'
+import { RECEIVE_RECIPE, ADD_RECIPE, DEL_RECIPE} from '../actions/index'
 
 const recipe=(state =[], action) => {
   const { type,payload } = action
@@ -6,6 +6,10 @@ const recipe=(state =[], action) => {
   switch (type) {
     case RECEIVE_RECIPE:
       return payload
+      case ADD_RECIPE:
+        return[...state,payload]
+        case DEL_RECIPE:
+          return state.filter((id) => recipe.id !==payload)
     default:
       return state
      

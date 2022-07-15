@@ -14,16 +14,36 @@ router.get('/', (req, res) => {
     })
 })
 
-// router.get('/:category',(req,res)=>{
-//   const category = req.params.category
-//   db.getCategory(category)
-//   .then((category)=>{
-//     res.json(category)
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.status(500).json({ message: 'Somthing went wrong' })
-//   })
+router.post('/', (req,res) => {
+  const recipe = req.body
+  db.addOneRecipe(recipe)
+.then((recipeArr) => {
+  const newRecipeId = recipeArr[0]
+  return db.selectRecipe(newRecipeId)
+})
+.then((recipe) => {
+  res.json(recipe)
+  
+})
+.catch(err => {
+  console.log(err)
+  res.status(500).json({ message: 'Somthing went wrong' })
+})
+  }
+)
 
-// })
+router.delete('/:id', (req,res) => {
+  const id = req.params.id
+  console.log(id)
+  db.deleteRecipe(id)
+  .then((deleted) => {
+    res.json(deleted)
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(500).json({ message: 'Somthing went wrong' })
+  })
+})
+
+
 module.exports = router
