@@ -1,45 +1,99 @@
 import React, { useState } from 'react'
 
 function AddForm(props) {
-const [formData, setFormData] = useState({
-  name:'',
-  // RADIO BUTTONS
-  description:'',
-})
-
-const handleSubmit = (e) => {
-  e.preventDefault()
-  const newRecipe = formData
-
-  setFormData({
-    name:'',
-    //RADIO BUTTONS
+  const [formData, setFormData] = useState({
+    name: '',
+    category: '',
+    ingredients: '',
     description: '',
+    img: '',
   })
 
-  addNewRecipe(newRecipe)
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const newRecipe = formData
 
-  .then(() =>{
+    setFormData({
+      name: '',
+      category: '',
+      ingredients: '',
+      description: '',
+      img: '',
+    })
 
-    props.refreshRecipes()
-  }).catch((err) => {
-    console.log(err)
-  })
-}
+    dispatch(addNewRecipe(newRecipe))
+  }
 
-const handleChange = (e) => {
-  console.log(e.target, e.target.value)
-  setFormData({
-    ...formData,
-    [e.target.name]: e.target.value
-  })
-}
+  const handleChange = (e) => {
+    console.log(e.target, e.target.value)
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}
+    <>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Name:</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <br />
+        <label for="vegetable">Vegetable</label>
+        <input
+          type="radio"
+          id="vegetable"
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+        />
+        <label for="protein">Protein</label>
+        <input
+          type="radio"
+          id="protein"
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+        />
+        <label for="grains">Grains</label>
+        <input
+          type="radio"
+          id="grains"
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+        />
+        <br />
+        <label htmlFor="ingredients">Ingredients:</label>
+        <input
+          id="ingredients"
+          name="ingredients"
+          type="text"
+          value={formData.ingredients}
+          onChange={handleChange}
+        />
+        <br />
+        <label htmlFor="description">Description:</label>
+        <input
+          id="description"
+          name="description"
+          type="text"
+          value={formData.description}
+          onChange={handleChange}
+        />
+        <br />
+        <label htmlFor="img">Upload image:</label>
+        <input type="file" id="myFile" name="filename" />
 
-    </div>
+        <br />
+        <button>Send</button>
+      </form>
+    </>
   )
 }
 

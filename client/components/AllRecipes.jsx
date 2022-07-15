@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
-import { useSelector ,useDispatch} from 'react-redux'
-import {getRecipe} from '../actions/index'
+import { useSelector, useDispatch } from 'react-redux'
+import { getRecipe } from '../actions/index'
 import OneRecipe from './OneRecipe'
 
-function AllRecipes() {
- const recipes = useSelector((state) => state.recipe)
+function AllRecipes ({ data }) {
+  const recipes = useSelector((state) => state.recipe)
 
   return (
-   
     <>
     <h2>Recipes</h2>
     <div className='allRecipes'>
@@ -17,9 +16,7 @@ function AllRecipes() {
 
   
     </>
-    )
-  }
-  
-
+  )
+}
 
 export default AllRecipes
