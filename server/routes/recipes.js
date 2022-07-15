@@ -1,19 +1,17 @@
 const express = require('express')
-
-
 const db = require('../db/dbFuncs/recipes')
 
 const router = express.Router()
 
-router.get('/' ,(req,res)=>{
+router.get('/', (req, res) => {
   db.getRecipes()
-  .then((recipe)=>{
-    res.json(recipe)
-  })
-  .catch(err => {
-    console.log(err)
-    res.status(500).json({ message: 'Somthing went wrong' })
-  })
+    .then((recipe) => {
+      res.json(recipe)
+    })
+    .catch((err) => {
+      console.log(err)
+      res.status(500).json({ message: 'Somthing went wrong' })
+    })
 })
 
 router.post('/', (req,res) => {

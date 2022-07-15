@@ -1,8 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Nav() {
+function Nav () {
   return (
-    <div>Nav</div>
+    <>
+      <nav>
+        <div>
+          <Link to="/">Home</Link>
+          <p>hi</p>
+          <Link to="/all">All Recipes</Link>
+          <Link to="/add">Add Recipe</Link>
+        </div>
+      </nav>
+    </>
   )
 }
 

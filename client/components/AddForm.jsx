@@ -23,26 +23,39 @@ const handleSubmit = (e) => {
     name:'',
     category:'',
     ingredients:'',
+
     description: '',
-    img:'',
+    img: '',
   })
 
-  dispatch(addNewRecipe(newRecipe))
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const newRecipe = formData
 
-}
+    setFormData({
+      name: '',
+      category: '',
+      ingredients: '',
+      description: '',
+      img: '',
+    })
 
-const handleChange = (e) => {
-  console.log(e.target, e.target.value)
-  setFormData({
-    ...formData,
-    [e.target.name]: e.target.value
-  })
-}
+    dispatch(addNewRecipe(newRecipe))
+  }
+
+  const handleChange = (e) => {
+    console.log(e.target, e.target.value)
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
 
 
   return (
     <>
       <form onSubmit={handleSubmit}>
+
         <label htmlFor='name'>Name:</label>
         <input id='name' name='name' type='text' value={formData.name} onChange={handleChange}/>
         <br/>
@@ -65,12 +78,6 @@ const handleChange = (e) => {
         <br/>
        
       </form>
-
-      
-        
-        
-      
-
 
     </>
   )
