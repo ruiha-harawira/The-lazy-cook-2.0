@@ -1,10 +1,10 @@
 exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex('recipes')
-    .del()
+  return knex('recipes').del()
     .then(function () {
       // Inserts seed entries
       return knex('recipes').insert([
+      
         {
           id: 1,
           name: 'Teriyaki chicken',
@@ -240,6 +240,7 @@ exports.seed = function (knex) {
           img: '/images/carrot-salad.jpg',
           category: 'Vegetables',
         },
+
       ])
     })
 }
