@@ -1,12 +1,12 @@
 import request from 'superagent'
 
-export function fetchRecipe() {
-  return request.get(`/api/v1/recipes/`).then((res) => {
+export function fetchRecipe () {
+  return request.get('/api/v1/recipes/').then((res) => {
     return res.body
   })
 }
 
-export function postRecipe(newRecipe) {
+export function postRecipe (newRecipe) {
   return request
     .post('/api/v1/recipes')
     .send(newRecipe)
