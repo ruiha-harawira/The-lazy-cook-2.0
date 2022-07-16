@@ -1,13 +1,30 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addRecipe } from '../apis/RecipeApi'
+import { addNewRecipe } from '../actions/index'
 
 function AddForm(props) {
+  const dispatch = useDispatch()
   const [formData, setFormData] = useState({
     name: '',
     category: '',
     ingredients: '',
     description: '',
-    img: '',
+    img: ''
   })
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   const newRecipe = formData
+
+  //   setFormData({
+  //     name: '',
+  //     category: '',
+  //     ingredients: '',
+
+  //     description: '',
+  //     img: '',
+  //   })
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -18,7 +35,7 @@ function AddForm(props) {
       category: '',
       ingredients: '',
       description: '',
-      img: '',
+      img: ''
     })
 
     dispatch(addNewRecipe(newRecipe))
@@ -89,9 +106,8 @@ function AddForm(props) {
         <br />
         <label htmlFor="img">Upload image:</label>
         <input type="file" id="myFile" name="filename" />
-
-        <br />
         <button>Send</button>
+        <br />
       </form>
     </>
   )

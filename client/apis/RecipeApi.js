@@ -1,27 +1,24 @@
 import request from 'superagent'
 
-export function fetchRecipe () {
-  return request.get(`/api/v1/recipes/`)
+export function fetchRecipe() {
+  return request.get(`/api/v1/recipes/`).then((res) => {
+    return res.body
+  })
+}
+
+export function postRecipe(newRecipe) {
+  return request
+    .post('/api/v1/recipes')
+    .send(newRecipe)
     .then((res) => {
       return res.body
-    })}
+    })
+    .catch((err) => {
+      const errMsg = `Failed to post recipe: ${err.message}`
+      console.warn(errMsg)
+    })
+}
 
-// export function getCategory (category){
-//   return request.get(`/api/v1/recipes/${category}`)
-//    .then((res)=>{
-//     console.log(res)
-//     return res.body
-//    })
-// }
-export function addRecipe(recipe){
-return request 
-.post('/api/addRecipe')
-.send(recipe)
-.then((res) => {
-  return res.body
-})
-.catch((err) => {
-  const errMsg = `Failed to post resipe: ${err.message}`
-  console.warn(errMsg)
-
-})}
+export function deleteOneRecipe(id) {
+  return request.delete(`/api/v1/recipes/${id}`).then((res) => res)
+}
