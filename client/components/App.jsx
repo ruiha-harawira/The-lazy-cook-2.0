@@ -15,7 +15,6 @@ function App() {
       <Nav className='nav'/>
       <Routes>
         <Route path="/all" element={<AllRecipes />} />
-      
         <Route path="/add" element={<AddForm />} />
       </Routes>
     </div>
