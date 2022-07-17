@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addRecipe } from '../apis/RecipeApi'
+// import { addRecipe } from '../apis/RecipeApi'
 import { addNewRecipe } from '../actions/index'
-
 
 
 function AddForm(props) {
@@ -14,7 +13,6 @@ const [formData, setFormData] = useState({
   description:'',
   img:'',
 })
-
 
   const handleSubmit = (e) => {
     e.preventDefault()
