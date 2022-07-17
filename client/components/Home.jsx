@@ -2,79 +2,75 @@ import React from 'react'
 import styled from 'styled-components'
 import { useSelector } from 'react-redux'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
-import '@splidejs/splide/css';
-import {Link} from 'react-router-dom'
+import '@splidejs/splide/dist/css/splide.min.css'
+import { Link } from 'react-router-dom'
 
 import OneRecipe from './OneRecipe'
 
-function Home() {
-const recipes = useSelector((state) => state.recipe)
+function Home () {
+  const recipes = useSelector((state) => state.recipe)
+  const recipe = recipes.find(element => {
+    return element.id === 4
+  })
 
- const recipe = recipes.find(element => {
-  return element.id === 4;})
-  
-
-// console.log(recipes)
+  // console.log(recipes)
   return (
     <div>
-    <h2>Recipes</h2>
-    <div className='recipeOfTheDay'>
-      <OneRecipe data={recipe}  />
+      <h2>Recipes</h2>
+      <div className='recipeOfTheDay'>
+        <OneRecipe data={recipe} />
+      </div>
+
+      <div>
+        <button>Vegetables</button>
+        <button>Protein</button>
+        <button>Grains</button>
+      </div>
+      <section>
+        <div className='veggies'>
+          <Wrapper>
+            <h3>Vege</h3>
+            <Splide
+              options={{
+                perPage: 3,
+                arrows: false,
+                pagination: false,
+                drag: 'free',
+                gap: '5rem'
+              }}>
+              {recipes.map((recipeVege) => {
+                return (
+                  <SplideSlide key = {recipeVege.id}>
+                    <Card>
+                      <Link to={'/recipe/' + recipeVege.id}>
+                        <div className='front'>
+                          <img src = {recipeVege.img} alt={recipeVege.name}/>
+                        </div>
+                        <div className='back'>
+                          <p>{recipeVege.name}</p>
+                          <p>{recipeVege.description}</p>
+                        </div>
+                      </Link>
+                    </Card>
+                  </SplideSlide>
+                )
+              })}
+
+            </Splide>
+          </Wrapper>
+        </div>
+      </section>
+
     </div>
 
-    <div>
-      <button>Vegetables</button>
-      <button>Protein</button>
-      <button>Grains</button>
-    </div>
-    <section>
-      <div className='veggies'>
-        <Wrapper>
-          <h3>Vege</h3>
-          <Splide
-            options={{
-              perPage:3,
-              arrow:true,
-              pagination:false,
-              drag:"free",
-              gap:"5rem",
-            }}
-            >
-            {recipes.map((recipeVege) =>{
-              return (
-              <SplideSlide key = {recipeVege.id}>
-                <Card>
-                  <Link to={'/recipe/' +recipeVege.id}>
-                  <div className='front'>
-                    <img src = {recipeVege.img} alt={recipeVege.name}/>
-                  </div>
-                  <div className='back'>
-                      <p>{recipeVege.name}</p>
-                      <p>{recipeVege.description}</p>
-                  </div>
-                  </Link>
-                 </Card>
-               </SplideSlide>
-              )})}
-
-          </Splide>
-        </Wrapper>
-      </div>   
-    </section>
-
-    </div>
-    
   )
-  
- 
 }
 const Wrapper = styled.div`
 margin: 4rem 0rem;
 .splide__list{
   display:flex;
-
 }
-`;
+`
 
 const Card = styled.div`
 min-height:25rem;
@@ -90,7 +86,7 @@ position:relative;
   width:100%;
   height:100%;
   object-fit:cover;
-  transition: all 2s;
+  transition: all 3s;
  };
 
  .front:hover{
@@ -117,7 +113,7 @@ position:relative;
   text-decoration: none;
   background-color:dark;
  }
-`;
+`
 // const CardText = styled.div`
 //   p:active{
 //   display:none;
@@ -144,3 +140,4 @@ position:relative;
 // `
 
 export default Home
+//.filter(recipe => recipe.category === 'Vegetables').

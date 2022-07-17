@@ -19,6 +19,7 @@ function App() {
   return (
     <>
       <Nav className="nav" />
+
       <Routes>
         <Route path="/" element={<Home data={recipes} />} />
         <Route path="/all" element={<AllRecipes />} />
