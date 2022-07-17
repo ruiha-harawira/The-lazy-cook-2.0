@@ -38,7 +38,7 @@ function Home () {
                 drag: 'free',
                 gap: '5rem'
               }}>
-              {recipes.filter(recipe => recipe.category === 'Vegetables').map((recipeVege) => {
+              {recipes.map((recipeVege) => {
                 return (
                   <SplideSlide key = {recipeVege.id}>
                     <Card>
@@ -86,7 +86,7 @@ position:relative;
   width:100%;
   height:100%;
   object-fit:cover;
-  transition: all 2s;
+  transition: all 3s;
  };
 
  .front:hover{
@@ -140,3 +140,4 @@ position:relative;
 // `
 
 export default Home
+//.filter(recipe => recipe.category === 'Vegetables').
