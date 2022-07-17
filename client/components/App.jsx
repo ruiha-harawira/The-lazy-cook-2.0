@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   return (
- className='nav'/>
+//  className='nav'/>
 
     <>
       <Nav className="nav" />
