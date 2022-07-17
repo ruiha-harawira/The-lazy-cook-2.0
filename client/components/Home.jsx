@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useSelector } from 'react-redux'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
-import '@splidejs/react-splide/css'
+import '@splidejs/splide/css';
 import {Link} from 'react-router-dom'
 
 import OneRecipe from './OneRecipe'
@@ -38,8 +38,9 @@ const recipes = useSelector((state) => state.recipe)
               pagination:false,
               drag:"free",
               gap:"5rem",
-            }}>
-            {recipes.filter(recipe =>recipe.category==="Vegetables").map((recipeVege) =>{
+            }}
+            >
+            {recipes.map((recipeVege) =>{
               return (
               <SplideSlide key = {recipeVege.id}>
                 <Card>
