@@ -102,7 +102,7 @@ exports.seed = function (knex) {
           name: 'Apple',
           description: 'eat apple.',
           ingredient1: 'apple',
-          img: '/images/apple.jpg',
+          img: '/images/apple2.jpg',
           category: 'Vegetables',
         },
 
@@ -115,7 +115,7 @@ exports.seed = function (knex) {
           ingredient2: 'red cabbage',
           ingredient3: 'salad dressing',
 
-          img: '/images/carrot-salad.jpg',
+          img: '/images/carrot2.jpg',
           category: 'Vegetables',
         },
 
@@ -184,7 +184,7 @@ exports.seed = function (knex) {
           id: 15,
           name: 'Trail Mix!',
           description:
-            'Mix all the grains together in a single bag, then shake!. Enjoy!',
+            'Mix all the grains together in a single bag, then shake! Enjoy!',
           ingredient1: 'dried corn',
           ingredient2: 'sunflower seeds',
           ingredient3: 'wheat grains',
