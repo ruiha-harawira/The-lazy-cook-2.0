@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { postRecipe } from '../apis/RecipeApi'
+// import { addRecipe } from '../apis/RecipeApi'
 import { addNewRecipe } from '../actions/index'
+
 
 function AddForm(props) {
   const dispatch = useDispatch()
@@ -12,19 +13,6 @@ function AddForm(props) {
     description: '',
     img: ''
   })
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   const newRecipe = formData
-
-  //   setFormData({
-  //     name: '',
-  //     category: '',
-  //     ingredients: '',
-
-  //     description: '',
-  //     img: '',
-  //   })
 
   const handleSubmit = (e) => {
     e.preventDefault()

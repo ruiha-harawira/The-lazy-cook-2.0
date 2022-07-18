@@ -43,4 +43,17 @@ router.delete('/:id', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+  const id = Number(req.params.id)
+
+  db.selectRecipe(id)
+    .then((recipe) => {
+      res.json(recipe)
+    })
+    .catch((err) => {
+      console.log(err)
+      res.status(500).json({ message: 'Somthing went wrong' })
+    })
+})
+
 module.exports = router

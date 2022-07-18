@@ -20,5 +20,5 @@ module.exports = {
   getRecipes,
   addOneRecipe,
   selectRecipe,
-  deleteRecipe
+  deleteRecipe,
 }

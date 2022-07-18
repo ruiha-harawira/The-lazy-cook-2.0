@@ -159,8 +159,8 @@ exports.seed = function (knex) {
             'curry powder',
             '2 slices of bread',
           ]),
-          img: '/images/beansOnToast.jpg',
-          category: 'Protein',
+          img: '/images/beansOnToast.jpeg',
+          category: 'Protein'
         },
         {
           id: 13,

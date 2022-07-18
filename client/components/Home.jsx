@@ -8,12 +8,15 @@ import { Link } from 'react-router-dom'
 import OneRecipe from './OneRecipe'
 
 function Home () {
+  
   const recipes = useSelector((state) => state.recipe)
+    
+  const id= Math.floor(Math.random()*recipes.length)
+    console.log('id',id)
   const recipe = recipes.find(element => {
-    return element.id === 4
+    return element.id === id
   })
 
-  // console.log(recipes)
   return (
     <div>
       <h2>Recipes</h2>
@@ -22,14 +25,14 @@ function Home () {
       </div>
 
       <div>
-        <button>Vegetables</button>
-        <button>Protein</button>
-        <button>Grains</button>
+        <button><a href='#vege'>Vegetables</a></button>
+        <button><a href='#protein'>Protein</a></button>
+        <button><a href='#grains'>Grains</a></button>
       </div>
       <section>
         <div className='veggies'>
           <Wrapper>
-            <h3>Vege</h3>
+            <h3 id='vege'>Vege</h3>
             <Splide
               options={{
                 perPage: 3,
@@ -60,6 +63,75 @@ function Home () {
           </Wrapper>
         </div>
       </section>
+      <section>
+        <div className='protein'>
+          <Wrapper>
+            <h3 id='protein'>Protein</h3>
+            <Splide
+              options={{
+                perPage: 3,
+                arrows: false,
+                pagination: false,
+                drag: 'free',
+                gap: '5rem'
+              }}>
+              {recipes.filter(recipe => recipe.category === 'Protein').map((recipeProtein) => {
+                return (
+                  <SplideSlide key = {recipeProtein.id}>
+                    <Card>
+                      <Link to={'/recipe/' + recipeProtein.id}>
+                        <div className='front'>
+                          <img src = {recipeProtein.img} alt={recipeProtein.name}/>
+                        </div>
+                        <div className='back'>
+                          <p>{recipeProtein.name}</p>
+                          <p>{recipeProtein.description}</p>
+                        </div>
+                      </Link>
+                    </Card>
+                  </SplideSlide>
+                )
+              })}
+
+            </Splide>
+          </Wrapper>
+        </div>
+      </section>
+      <section>
+        <div className='Grains'>
+          <Wrapper>
+            <h3 id='grains'>Grains</h3>
+            <Splide
+              options={{
+                perPage: 3,
+                arrows: false,
+                pagination: false,
+                drag: 'free',
+                gap: '5rem'
+              }}>
+              {recipes.filter(recipe => recipe.category === 'Grains').map((recipeGrains) => {
+                return (
+                  <SplideSlide key = {recipeGrains.id}>
+                    <Card>
+                      <Link to={'/recipe/' + recipeGrains.id}>
+                        <div className='front'>
+                          <img src = {recipeGrains.img} alt={recipeGrains.name}/>
+                        </div>
+                        <div className='back'>
+                          <p>{recipeGrains.name}</p>
+                          <p>{recipeGrains.description}</p>
+                        </div>
+                      </Link>
+                    </Card>
+                  </SplideSlide>
+                )
+              })}
+
+            </Splide>
+          </Wrapper>
+        </div>
+      </section>
+
 
     </div>
 
