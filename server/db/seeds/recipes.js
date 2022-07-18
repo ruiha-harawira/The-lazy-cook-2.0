@@ -179,17 +179,18 @@ exports.seed = function (knex) {
 
         {
           id: 14,
-          name: 'Mac & Cheese',
+          name: 'Cereal Treat',
           description:
-            'In a large pot, bring the milk to a boil. Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
+            'Prepare a square glass baking dish with cooking spray. Melt marshmallows over medium heat in a nonstick pan. Stir every 30 seconds to avoid burning. (TIP! spray your spatula with nonstick cooking spray to make stirring easier.) Once the marshmallows are melted, add in the rice cereal and chocolates. Stir until fully combined. Stir until fully combined. Scoop the mixture into the sprayed baking dish and flatten with a spatula. Cool for 30 minutes, then cut into squares. Enjoy!',
           ingredients: JSON.stringify([
-            '5 cups milk',
-            '455g elbow macaroni',
-            'dry 2 cups shredded cheddar cheese',
+            '1 cup chocolate candy(175 g)',
+            '2 ½ cups marshmallow(140 g)',
+            '3 cups puffed rice cereal(90 g)',
           ]),
-          img: '/images/macncheese.jpg',
+          img: '/images/riceKrispie.jpg',
           category: 'Grains',
         },
+
         {
           id: 15,
           name: 'Mac & Cheese',
@@ -203,6 +204,7 @@ exports.seed = function (knex) {
           img: '/images/macncheese.jpg',
           category: 'Grains',
         },
+
         {
           id: 16,
           name: 'Carrot salad',
@@ -216,6 +218,7 @@ exports.seed = function (knex) {
           img: '/images/carrot-salad.jpg',
           category: 'Grains',
         },
+
         {
           id: 17,
           name: 'Cheesy Garlic Broccoli',
@@ -229,6 +232,7 @@ exports.seed = function (knex) {
           img: '/images/brocoli.jpg',
           category: 'Vegetables',
         },
+
         {
           id: 18,
           name: 'Carrot salad',
