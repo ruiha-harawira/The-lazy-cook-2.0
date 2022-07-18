@@ -1,6 +1,6 @@
 import { fetchRecipe, postRecipe, deleteOneRecipe } from '../apis/RecipeApi'
 
-// vars
+//vars
 export const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
 export const REQUEST_RECIPE = 'REQUEST_RECIPE'
 export const ADD_RECIPE = 'ADD_RECIPE'
@@ -16,7 +16,7 @@ export function receiveRecipe(recipeArr) {
 export function requestAllRecipes() {
   return {
     type: REQUEST_ALL_RECIPES,
-    payload
+    payload,
   }
 }
 

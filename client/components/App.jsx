@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { Routes, Route } from 'react-router-dom'
 
 import AllRecipes from "./AllRecipes";
 import Home from "./Home";
@@ -10,13 +10,13 @@ import Nav from "./Nav";
 import Recipe from "./Recipe";
 
 
-function App() {
-  const recipes = useSelector((state) => state.recipe);
-  const dispatch = useDispatch();
+function App () {
+  const recipes = useSelector((state) => state.recipe)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getRecipe());
-  }, []);
+    dispatch(getRecipe())
+  }, [])
 
   return (
     <>
@@ -32,7 +32,7 @@ function App() {
 
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
