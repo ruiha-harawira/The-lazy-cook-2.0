@@ -17,7 +17,7 @@ exports.seed = function (knex) {
 
           ingredient3: '½ cup brown sugar',
 
-          img: '/images/teriyaki-chicken.jpg',
+          img: '/images/teriyaki-chicken-3.jpg',
           category: 'Protein',
         },
 
@@ -43,7 +43,7 @@ exports.seed = function (knex) {
           ingredient2: '2 eggs',
           ingredient3: '1 tin of baked beans',
 
-          img: '/images/eggs-and-chips.jpg',
+          img: '/images/bestEggChips.jpg',
           category: 'Protein',
         },
 
