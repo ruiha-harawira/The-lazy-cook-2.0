@@ -11,7 +11,7 @@ function OneRecipe({ data }) {
         <div>
           <p>{data.name}</p>
           <p>{data.description}</p>
-          <p>{data.ingredients}</p>
+          <p>{JSON.parse(data.ingredients).join('hello')}</p>
           <img src={data.img} />
           <button onClick={() => dispatch(removeRecipe(data.id))}>
             Delete

@@ -9,7 +9,7 @@ function AddForm(props) {
   const [formData, setFormData] = useState({
     name: '',
     category: '',
-    ingredients: '',
+    ingredients: [],
     description: '',
     img: ''
   })
@@ -21,7 +21,7 @@ function AddForm(props) {
     setFormData({
       name: '',
       category: '',
-      ingredients: '',
+      ingredients: [],
       description: '',
       img: ''
     })
