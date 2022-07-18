@@ -12,7 +12,6 @@ function Recipe() {
     const data = recipes.find(element => {
       return element.id == id
     })
- console.log(data)
   return (
     <>
     {data?

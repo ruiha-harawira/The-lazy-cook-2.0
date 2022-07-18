@@ -19,6 +19,14 @@ export function postRecipe (newRecipe) {
     })
 }
 
+export function searchForRecipe(word){
+  return request.get(`/api/v1/recipes/${word}`)
+  .then (res=>{
+    return(res.body)
+  })
+}
+
 export function deleteOneRecipe(id) {
   return request.delete(`/api/v1/recipes/${id}`).then((res) => res)
 }
+

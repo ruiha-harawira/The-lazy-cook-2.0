@@ -1,9 +1,15 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { useParams } from 'react-router-dom';
 import OneRecipe from './OneRecipe'
 
 function AllRecipes ({ data }) {
-  const recipes = useSelector((state) => state.recipe)
+  let recipes = useSelector((state) => state.recipe)
+  const { search } = useParams()
+  if( search ){
+    recipes = recipes.filter(element => {
+      return element.description.includes(search)})
+  }
 
   return (
     <>
