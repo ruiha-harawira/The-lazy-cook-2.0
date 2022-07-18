@@ -7,18 +7,19 @@ function OneRecipe({ data }) {
 
   return (
     <>
-      {data ? (
-        <div>
-          <p>{data.name}</p>
-          <p>{data.description}</p>
-          <p>{JSON.parse(data.ingredients).join('hello')}</p>
-          <img src={data.img} />
-          <button onClick={() => dispatch(removeRecipe(data.id))}>
-            Delete
-          </button>
-        </div>
-      ) : null}
-    </>
+    {data?
+    <div>
+      <p>{data.name}</p>
+      <p>{data.description}</p>
+      <p>{data.ingredient1}</p>
+      <p>{data.ingredient2}</p>
+      <p>{data.ingredient3}</p>
+
+      <img src={data.img} />
+      <button onClick={()=> dispatch(removeRecipe(data.id))}>Delete</button>
+    </div>:null}
+   
+  </>
   )
 }
 
