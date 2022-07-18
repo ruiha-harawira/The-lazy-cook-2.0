@@ -9,7 +9,9 @@ function AddForm(props) {
 const [formData, setFormData] = useState({
   name:'',
   category:'',
-  ingredients:'',
+  ingredient1:'',
+  ingredient2:'',
+  ingredient3:'',
   description:'',
   img:'',
 })
@@ -21,8 +23,9 @@ const [formData, setFormData] = useState({
     setFormData({
       name: '',
       category: '',
-      ingredients: '',
-      description: '',
+      ingredient1:'',
+      ingredient2:'',
+      ingredient3:'',      description: '',
       img: '',
     })
 
@@ -52,8 +55,17 @@ const [formData, setFormData] = useState({
         <label for='grains'>Grains</label>
         <input type='radio' id='grains' name='category' value={formData.category} onChange={handleChange}/>
         <br/>
-        <label htmlFor='ingredients'>Ingredients:</label>
-        <input id='ingredients' name='ingredients' type='text' value={formData.ingredients} onChange={handleChange}/>
+        <label htmlFor='ingredients'>Ingredient 1:</label>
+        <input  id='ingredients' name='ingredient1' type='text'
+        value={formData.ingredients} onChange={handleChange}/>
+        <br/>
+        <label htmlFor='ingredients'>Ingredient 2:</label>
+        <input  id='ingredients' name='ingredient2' type='text'
+        value={formData.ingredients} onChange={handleChange}/>
+        <br/>
+        <label htmlFor='ingredients'>Ingredient 3:</label>
+        <input  id='ingredients' name='ingredient3' type='text'
+        value={formData.ingredients} onChange={handleChange}/>
         <br/>
         <label htmlFor='description'>Description:</label>
         <input id='description' name='description' type='text' value={formData.description} onChange={handleChange}/>
