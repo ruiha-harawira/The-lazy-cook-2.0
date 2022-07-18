@@ -30,7 +30,7 @@ exports.seed = function (knex) {
           ingredient2: '455g elbow macaroni',
           ingredient3: 'dry 2 cups shredded cheddar cheese',
 
-          img: '/images/macncheese.jpg',
+          img: '/images/macncheese2.jpg',
           category: 'Grains',
         },
 
@@ -139,7 +139,7 @@ exports.seed = function (knex) {
           ingredient1: '6 x 6 oz wild salmon fillets skin on or off',
           ingredient2: '1/2 cup + 2 tbsp Thai sweet chili sauce',
           ingredient3: '2 – 3 tbsp green onions finely chopped',
-          img: '/images/salmon.jpg',
+          img: '/images/salmon2.jpg',
           category: 'Protein',
         },
         {
