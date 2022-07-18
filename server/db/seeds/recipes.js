@@ -162,19 +162,21 @@ exports.seed = function (knex) {
           img: '/images/beansOnToast.jpeg',
           category: 'Protein'
         },
+
         {
           id: 13,
-          name: 'Mac & Cheese',
+          name: 'Corn on the Cob',
           description:
-            'In a large pot, bring the milk to a boil. Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
+            'Preheat oven to 375ºF (190ºC). Coat each ear of corn in a thin layer of butter and roll in the parmesan cheese to coat. Place corn in a square baking dish and sprinkle with salt and pepper. Bake for 25 minutes. Enjoy!',
           ingredients: JSON.stringify([
-            '5 cups milk',
-            '455g elbow macaroni',
-            'dry 2 cups shredded cheddar cheese',
+            '6 half ears corn, cleaned, husked',
+            '2 tablespoons butter, softened',
+            '½ cup parmesan cheese(55 g), grated',
           ]),
-          img: '/images/macncheese.jpg',
-          category: 'Grains',
+          img: '/images/corn.jpg',
+          category: 'Vegetables',
         },
+
         {
           id: 14,
           name: 'Mac & Cheese',
@@ -212,19 +214,19 @@ exports.seed = function (knex) {
             'salad dressing',
           ]),
           img: '/images/carrot-salad.jpg',
-          category: 'Vegetables',
+          category: 'Grains',
         },
         {
           id: 17,
-          name: 'Carrot salad',
+          name: 'Cheesy Garlic Broccoli',
           description:
-            'Toss carrots, and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
+            'Preheat oven to 375ºF (190ºC). Spread out broccoli in a medium rectangular casserole dish. Stir the garlic and cheddar cheese together in a separate bowl. Sprinkle the cheese evenly over broccoli and add salt and pepper to taste. Bake for 25 minutes. Enjoy!',
           ingredients: JSON.stringify([
-            'carrots',
-            'red cabbage',
-            'salad dressing',
+            '3 crowns broccoli',
+            '1 ¾ cups shredded cheddar cheese(175 g)',
+            '3 cloves garlic, crushed',
           ]),
-          img: '/images/carrot-salad.jpg',
+          img: '/images/brocoli.jpg',
           category: 'Vegetables',
         },
         {
