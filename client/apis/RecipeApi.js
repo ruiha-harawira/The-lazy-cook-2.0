@@ -28,3 +28,9 @@ export function deleteOneRecipe(id){
 }
 
 
+export function searchForRecipe(word){
+  return request.get(`/api/v1/recipes/${word}`)
+  .then (res=>{
+    return(res.body)
+  })
+}

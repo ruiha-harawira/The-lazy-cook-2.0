@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Nav className="nav" />
+      <Nav className="nav" data={recipes}/>
 
       <Routes>
         <Route path="/" element={<Home data={recipes} />} />
