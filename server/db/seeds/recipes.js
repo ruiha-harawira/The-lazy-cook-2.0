@@ -1,9 +1,12 @@
 exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex('recipes').del()
+  return knex('recipes')
+    .del()
     .then(function () {
       // Inserts seed entries
+
       return knex("recipes").insert([
+
         {
           id: 1,
           name: "Teriyaki chicken",
@@ -151,6 +154,7 @@ exports.seed = function (knex) {
           ingredient3: "2 slices of bread",
           img: "/images/beansOnToast.jpeg",
           category: "Protein",
+
         },
         {
           id: 13,

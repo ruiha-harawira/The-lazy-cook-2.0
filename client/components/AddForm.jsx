@@ -6,6 +6,7 @@ import { addNewRecipe } from '../actions/index'
 
 function AddForm(props) {
   const dispatch = useDispatch()
+
 const [formData, setFormData] = useState({
   name:'',
   category:'',
@@ -16,6 +17,7 @@ const [formData, setFormData] = useState({
   img:'',
 })
 
+
   const handleSubmit = (e) => {
     e.preventDefault()
     const newRecipe = formData
@@ -23,10 +25,13 @@ const [formData, setFormData] = useState({
     setFormData({
       name: '',
       category: '',
+
       ingredient1:'',
       ingredient2:'',
-      ingredient3:'',      description: '',
+      ingredient3:'',      
+      description: '',
       img: '',
+
     })
 
     dispatch(addNewRecipe(newRecipe))
@@ -39,7 +44,6 @@ const [formData, setFormData] = useState({
       [e.target.name]: e.target.value,
     })
   }
-
 
   return (
     <>
@@ -76,7 +80,6 @@ const [formData, setFormData] = useState({
         <br/>
        
       </form>
-
     </>
   )
 }

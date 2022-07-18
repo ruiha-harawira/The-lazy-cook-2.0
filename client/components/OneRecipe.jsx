@@ -1,8 +1,8 @@
 import React from 'react'
-import { useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { removeRecipe } from '../actions/index'
 
-function OneRecipe({data}) {
+function OneRecipe({ data }) {
   const dispatch = useDispatch()
 
   return (

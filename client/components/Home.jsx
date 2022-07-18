@@ -12,7 +12,6 @@ function Home () {
   const recipes = useSelector((state) => state.recipe)
     
   const id= Math.floor(Math.random()*recipes.length)
-    console.log('id',id)
   const recipe = recipes.find(element => {
     return element.id === id
   })
