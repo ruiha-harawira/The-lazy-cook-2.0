@@ -102,7 +102,7 @@ exports.seed = function (knex) {
           name: 'Apple',
           description: 'eat apple.',
           ingredient1: 'apple',
-          img: '/images/apple.jpg',
+          img: '/images/apple2.jpg',
           category: 'Vegetables',
         },
 
@@ -115,7 +115,7 @@ exports.seed = function (knex) {
           ingredient2: 'red cabbage',
           ingredient3: 'salad dressing',
 
-          img: '/images/carrot-salad.jpg',
+          img: '/images/carrot2.jpg',
           category: 'Vegetables',
         },
 
@@ -182,26 +182,26 @@ exports.seed = function (knex) {
 
         {
           id: 15,
-          name: 'Mac & Cheese',
+          name: 'Trail Mix!',
           description:
-            'In a large pot, bring the milk to a boil. Add the pasta and stir constantly until the pasta is cooked, about 10 minutes. Turn off the heat, then add the cheddar. Stir until the cheese is melted and the pasta is evenly coated. Enjoy!',
-          ingredient1: '5 cups milk',
-          ingredient2: '455g elbow macaroni',
-          ingredient3: 'dry 2 cups shredded cheddar cheese',
-          img: '/images/macncheese.jpg',
+            'Mix all the grains together in a single bag, then shake! Enjoy!',
+          ingredient1: 'dried corn',
+          ingredient2: 'sunflower seeds',
+          ingredient3: 'wheat grains',
+          img: '/images/chickenGrains.jpg',
           category: 'Grains',
         },
 
         {
           id: 16,
-          name: 'Carrot salad',
+          name: 'Sun-Dried Tomato Shrimp and Rice',
           description:
-            'Toss carrots, and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
-          ingredient1: 'carrots',
-          ingredient2: 'red cabbage',
-          ingredient3: 'salad dressing',
-          img: '/images/carrot-salad.jpg',
-          category: 'Vegetables',
+            'In a large skillet over medium heat, heat oil. And stir until fragrant, 30 seconds. Add shrimp and cook, stirring occasionally, until shrimp is opaque throughout, 3 minutes. Add rice and cook, stirring, until thoroughly mixed and heated through.',
+          ingredient1: '¼ cup sun-dried tomato pesto',
+          ingredient2: '8 ounces medium shrimp, peeled, deveined, tails removed',
+          ingredient3: '2 cups cooked brown rice',
+          img: '/images/shrimpRice.jpg',
+          category: 'Grains',
         },
 
         {
@@ -219,13 +219,13 @@ exports.seed = function (knex) {
 
         {
           id: 18,
-          name: 'Carrot salad',
+          name: 'Pizza Frittata',
           description:
-            'Toss carrots, and cabbage in a mixing bowl. Drizzle with MIDDLE EASTERN SALAD DRESSING. Divide salad on serving plates or arrange on a platter. Serve chilled.',
-          ingredient1: 'carrots',
-          ingredient2: 'red cabbage',
-          ingredient3: 'salad dressing',
-          img: '/images/carrot-salad.jpg',
+            'Heat oven to 350°. In a large skillet over medium heat, heat oil. Add eggs and cherry tomatoes. Season with salt and pepper. Transfer to oven and bake 30 to 35 minutes, until cooked through and lightly browned on top. (A cooked frittata will spring back when you press in the center.) Top with mozzarella in the last 5 minutes of cooking. Cool slightly before serving.',
+          ingredient1: '8 large eggs, beaten',
+          ingredient2: '1 pint cherry tomatoe',
+          ingredient3: '3 ounces shredded mozzarella',
+          img: '/images/pizza.jpg',
           category: 'Vegetables',
         },
       ])
