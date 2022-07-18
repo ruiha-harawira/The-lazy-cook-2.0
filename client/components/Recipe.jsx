@@ -17,6 +17,7 @@ function Recipe() {
     <div>
       <p>{data.name}</p>
       <p>{data.description}</p>
+      <p>Ingredients:</p>
       <p>{data.ingredient1}</p>
       <p>{data.ingredient2}</p>
       <p>{data.ingredient3}</p>      <img src={data.img} />

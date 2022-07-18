@@ -11,6 +11,7 @@ function OneRecipe({ data }) {
     <div>
       <p>{data.name}</p>
       <p>{data.description}</p>
+      <p>Ingredients:</p>
       <p>{data.ingredient1}</p>
       <p>{data.ingredient2}</p>
       <p>{data.ingredient3}</p>
