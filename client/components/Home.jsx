@@ -18,7 +18,7 @@ function Home () {
 console.log(id,recipe)
   return (
     <div>
-{/*      
+      {/*      
       <div className='recipeOfTheDay'>
         {recipe?<div>
           <img src={recipe.img} />
@@ -29,124 +29,153 @@ console.log(id,recipe)
       
       
       </div> */}
-      
-   <div className="banner">
-    <h2 >Three ingredients cooking</h2>
-    <img src="/images/banner.jpg"  className="background"/> 
-    <p ><SearchRecipe /></p>
-   </div>
-   
-   <div className='category'>
-        <button><a href='#vege'>Vegetables</a></button>
-        <button><a href='#protein'>Protein</a></button>
-        <button><a href='#grains'>Grains</a></button>
+
+      <div className="banner">
+        <h2>Three ingredients cooking</h2>
+        <img src="/images/banner.jpg" className="background" />
+        <p>
+          <SearchRecipe />
+        </p>
+      </div>
+
+      <div className="category">
+        <button>
+          <a href="#vege">Vegetables</a>
+        </button>
+        <button>
+          <a href="#protein">Protein</a>
+        </button>
+        <button>
+          <a href="#grains">Grains</a>
+        </button>
       </div>
       <section>
-        <div className='veggies'>
+        <div className="veggies">
           <Wrapper>
-            <h3 id='vege'>Vege</h3>
+            <h3 id="vege">Vege</h3>
             <Splide
               options={{
                 perPage: 3,
                 arrows: false,
                 pagination: false,
                 drag: 'free',
-                gap: '5rem'
-              }}>
-              {recipes.filter(recipe => recipe.category === 'Vegetables').map((recipeVege) => {
-                return (
-                  <SplideSlide key = {recipeVege.id}>
-                    <Card>
-                      <Link to={'/recipe/' + recipeVege.id}>
-                        <div className='front'>
-                          <img src = {recipeVege.img} alt={recipeVege.name}/>
-                        </div>
-                        <div className='back'>
-                          <p>{recipeVege.name}</p>
-                          <p>{recipeVege.description}</p>
-                        </div>
-                      </Link>
-                    </Card>
-                  </SplideSlide>
-                )
-              })}
-
+                gap: '5rem',
+              }}
+            >
+              {recipes
+                .filter((recipe) => recipe.category === 'Vegetables')
+                .map((recipeVege) => {
+                  return (
+                    <SplideSlide key={recipeVege.id}>
+                      <Card>
+                        <Link to={'/recipe/' + recipeVege.id}>
+                          <div className="front">
+                            <img src={recipeVege.img} alt={recipeVege.name} />
+                          </div>
+                          <div className="back">
+                            <p>{recipeVege.name}</p>
+                            <p>
+                              {recipeVege.ingredient1} <br/>
+                              {recipeVege.ingredient2} <br/>
+                              {recipeVege.ingredient3} <br/>
+                            </p>
+                          </div>
+                        </Link>
+                      </Card>
+                    </SplideSlide>
+                  )
+                })}
             </Splide>
           </Wrapper>
         </div>
       </section>
       <section>
-        <div className='protein'>
+        <div className="protein">
           <Wrapper>
-            <h3 id='protein'>Protein</h3>
+            <h3 id="protein">Protein</h3>
             <Splide
               options={{
                 perPage: 3,
                 arrows: false,
                 pagination: false,
                 drag: 'free',
-                gap: '5rem'
-              }}>
-              {recipes.filter(recipe => recipe.category === 'Protein').map((recipeProtein) => {
-                return (
-                  <SplideSlide key = {recipeProtein.id}>
-                    <Card>
-                      <Link to={'/recipe/' + recipeProtein.id}>
-                        <div className='front'>
-                          <img src = {recipeProtein.img} alt={recipeProtein.name}/>
-                        </div>
-                        <div className='back'>
-                          <p>{recipeProtein.name}</p>
-                          <p>{recipeProtein.description}</p>
-                        </div>
-                      </Link>
-                    </Card>
-                  </SplideSlide>
-                )
-              })}
-
+                gap: '5rem',
+              }}
+            >
+              {recipes
+                .filter((recipe) => recipe.category === 'Protein')
+                .map((recipeProtein) => {
+                  return (
+                    <SplideSlide key={recipeProtein.id}>
+                      <Card>
+                        <Link to={'/recipe/' + recipeProtein.id}>
+                          <div className="front">
+                            <img
+                              src={recipeProtein.img}
+                              alt={recipeProtein.name}
+                            />
+                          </div>
+                          <div className="back">
+                            <p>{recipeProtein.name}</p>
+                            <p>
+                              {recipeProtein.ingredient1} <br/>
+                              {recipeProtein.ingredient2} <br/>
+                              {recipeProtein.ingredient3} <br/>
+                            </p>
+                          </div>
+                        </Link>
+                      </Card>
+                    </SplideSlide>
+                  )
+                })}
             </Splide>
           </Wrapper>
         </div>
       </section>
       <section>
-        <div className='Grains'>
+        <div className="Grains">
           <Wrapper>
-            <h3 id='grains'>Grains</h3>
+            <h3 id="grains">Grains</h3>
             <Splide
               options={{
                 perPage: 3,
                 arrows: false,
                 pagination: false,
                 drag: 'free',
-                gap: '5rem'
-              }}>
-              {recipes.filter(recipe => recipe.category === 'Grains').map((recipeGrains) => {
-                return (
-                  <SplideSlide key = {recipeGrains.id}>
-                    <Card>
-                      <Link to={'/recipe/' + recipeGrains.id}>
-                        <div className='front'>
-                          <img src = {recipeGrains.img} alt={recipeGrains.name}/>
-                        </div>
-                        <div className='back'>
-                          <p>{recipeGrains.name}</p>
-                          <p>{recipeGrains.description}</p>
-                        </div>
-                      </Link>
-                    </Card>
-                  </SplideSlide>
-                )
-              })}
-
+                gap: '5rem',
+              }}
+            >
+              {recipes
+                .filter((recipe) => recipe.category === 'Grains')
+                .map((recipeGrains) => {
+                  return (
+                    <SplideSlide key={recipeGrains.id}>
+                      <Card>
+                        <Link to={'/recipe/' + recipeGrains.id}>
+                          <div className="front">
+                            <img
+                              src={recipeGrains.img}
+                              alt={recipeGrains.name}
+                            />
+                          </div>
+                          <div className="back">
+                            <p>{recipeGrains.name}</p>
+                            <p>
+                              { recipeGrains.ingredient1 } <br/>
+                              { recipeGrains.ingredient2 } <br/>
+                              { recipeGrains.ingredient3 } <br/>
+                            </p>
+                          </div>
+                        </Link>
+                      </Card>
+                    </SplideSlide>
+                  )
+                })}
             </Splide>
           </Wrapper>
         </div>
       </section>
-
-
     </div>
-
   )
 }
 const Wrapper = styled.div`
