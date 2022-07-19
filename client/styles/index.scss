@@ -147,6 +147,7 @@ color:#fff;
   margin: auto;
   text-align:center;
 
+
 }
 
 // .container body {
@@ -163,7 +164,7 @@ color:#fff;
 // }
 
 .container h1 {
-  font-size: 2em;
+  font-size: 3em;
   padding: 10px;
   color: #000;
   letter-spacing: 5px;
@@ -172,16 +173,18 @@ color:#fff;
   padding-left: 10px;
   font-family: 'Square Peg', cursive;
 
+
 }
 
 .container .inputbox {
   position: relative;
   width: 250px;
-  height: 30px;
-  margin-bottom: 40px;
+  height: -20px;
+  margin-bottom: 50px;
   // margin:40px;
-  padding: 5px;
+  padding: 10px;
   margin-left:70px;
+
 
 
   
@@ -192,12 +195,15 @@ color:#fff;
   top: 0;
   left: 20%;
   width: 100%;
+  height: 30px;
   border: 2px solid #000;
   outline: none;
   background: none;
   padding: 5px;
   border-radius: 10px;
   font-size: 1.2em;
+ 
+  
  
 }
 
@@ -209,8 +215,9 @@ color:#fff;
   transition: 0.6s;
   font-family: sans-serif;
   margin: -30%;
-  margin-top: 5px;
+  margin-top: -33px;
   margin-bottom: 40px;
+
 
 }
 .radioinputbox {
@@ -219,13 +226,59 @@ color:#fff;
   float:left;
   padding-bottom:8px;
   margin-left: 50px;
-  margin-top:-15px;
+  margin-top:-35px;
 
 }
 
 .radioinputbox label {
  margin-top: 8px;
 }
+
+.container .inputboxD input {
+  position: relative;
+  width: 240px;
+  height: -20px;
+  margin-bottom: 10px;
+  // margin:40px;
+  padding: 20px;
+  margin-left:45px;
+  border: 2px solid #000;
+
+}
+
+.container .inputboxD label {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  font-size: 1em;
+  transition: 0.6s;
+  font-family: sans-serif;
+  margin: -30%;
+  margin-top: -33px;
+  margin-bottom: 40px;
+
+}
+
+.container .inputboxD {
+  position: relative;
+  width: 250px;
+  height: -20px;
+  margin-bottom: 50px;
+  // margin:40px;
+  padding: 10px;
+  margin-left:70px;
+}
+
+fieldset {
+  border: 3px solid black;
+ 
+
+
+
+}
+
+
+
 
 
 
