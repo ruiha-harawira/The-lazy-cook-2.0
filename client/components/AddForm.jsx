@@ -121,7 +121,7 @@ function AddForm(props) {
           onChange={handleChange}
         />
         </div>
-        <div class="inputbox">
+        <div class="inputboxD">
         <label htmlFor="description">Description:</label>
         <input
           id="description"
