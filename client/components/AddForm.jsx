@@ -44,7 +44,12 @@ function AddForm(props) {
 
   return (
     <>
+    <div class="container">
+     
       <form onSubmit={handleSubmit}>
+        <fieldset> 
+        <h1> Add your own recipe </h1>
+        <div class="inputbox">
         <label htmlFor="name">Name:</label>
         <input
           id="name"
@@ -53,7 +58,9 @@ function AddForm(props) {
           value={formData.name}
           onChange={handleChange}
         />
-        <br />
+        </div>
+      <br/>
+        <div class="radioinputbox">
         <label for="vegetable">Vegetable</label>
         <input
           type="radio"
@@ -62,6 +69,8 @@ function AddForm(props) {
           value={formData.category}
           onChange={handleChange}
         />
+        </div>
+        <div class="radioinputbox">
         <label for="protein">Protein</label>
         <input
           type="radio"
@@ -70,6 +79,8 @@ function AddForm(props) {
           value={formData.category}
           onChange={handleChange}
         />
+        </div>
+        <div class="radioinputbox">
         <label for="grains">Grains</label>
         <input
           type="radio"
@@ -78,7 +89,9 @@ function AddForm(props) {
           value={formData.category}
           onChange={handleChange}
         />
-        <br />
+        </div>
+        <br/>
+        <div class="inputbox">
         <label htmlFor="ingredients">Ingredient 1:</label>
         <input
           id="ingredients"
@@ -87,7 +100,8 @@ function AddForm(props) {
           value={formData.ingredients}
           onChange={handleChange}
         />
-        <br />
+        </div>
+        <div class="inputbox">
         <label htmlFor="ingredients">Ingredient 2:</label>
         <input
           id="ingredients"
@@ -96,7 +110,8 @@ function AddForm(props) {
           value={formData.ingredients}
           onChange={handleChange}
         />
-        <br />
+        </div>
+        <div class="inputbox">
         <label htmlFor="ingredients">Ingredient 3:</label>
         <input
           id="ingredients"
@@ -105,7 +120,8 @@ function AddForm(props) {
           value={formData.ingredients}
           onChange={handleChange}
         />
-        <br />
+        </div>
+        <div class="inputbox">
         <label htmlFor="description">Description:</label>
         <input
           id="description"
@@ -114,12 +130,15 @@ function AddForm(props) {
           value={formData.description}
           onChange={handleChange}
         />
-        <br />
+        </div>
+        <div class="inputbox">
         <label htmlFor="img">Upload image:</label>
-        <input type="text" id="image" placeholder="your image" />
+        <input type="file" id="image" placeholder="your image" />
+        </div>
         <button>Send</button>
-        <br />
+        </fieldset>
       </form>
+      </div>
     </>
   )
 }
