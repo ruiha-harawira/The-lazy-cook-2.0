@@ -9,7 +9,7 @@ import AddForm from './AddForm'
 import Nav from './Nav'
 import Recipe from './Recipe'
 
-function App() {
+function App () {
   const recipes = useSelector((state) => state.recipe)
   const dispatch = useDispatch()
 
