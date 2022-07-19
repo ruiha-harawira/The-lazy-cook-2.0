@@ -1,9 +1,9 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
-import { removeRecipe } from '../actions/index'
+import React from "react";
+import { useDispatch } from "react-redux";
+import { removeRecipe } from "../actions/index";
 
 function OneRecipe({ data }) {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -23,7 +23,7 @@ function OneRecipe({ data }) {
         </div>
       ) : null}
     </>
-  )
+  );
 }
 
-export default OneRecipe
+export default OneRecipe;

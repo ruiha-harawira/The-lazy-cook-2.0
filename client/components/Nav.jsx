@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import SearchRecipe from './SearchRecipe'
+
 import { useSelector } from 'react-redux'
 
 
@@ -13,13 +13,13 @@ function Nav () {
     <>
       <nav>
         <div className='nav'>
-          <Link to="/">Home</Link>
-          <Link to="/all">All Recipes</Link>
-          <Link to="/add">Add Recipe</Link>
+          <p><Link to="/">Home</Link></p>
+          <p><Link to="/all">Recipes</Link></p>
+          <p><Link to="/add">Add recipe</Link></p>
         </div>
-      
+
       </nav>
-      <SearchRecipe />
+     
     </>
   )
 }

@@ -20,20 +20,19 @@ function SearchRecipe() {
   }
   return (
     <>
-    <form onSubmit={handleSubmit}>
+    <div > 
+      <form onSubmit={handleSubmit}>
       <label>
         
-        <input onChange={handleTyping} name='search'  value={search} type='text' />
+        <input onChange={handleTyping} name='search'  value={search} type='text'  >
+         
+        </input>
       </label>
-      <button>Done</button>
-    </form>
-    {/* {search.map((item)=>{
-      return(
-        <h4>{item.name}</h4>
-      )
-    })} */}
- 
+       <button>Search</button>
+    </form> 
+    </div>
     </>
+   
   )
 }
 

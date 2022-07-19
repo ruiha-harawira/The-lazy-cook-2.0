@@ -4,26 +4,39 @@ import { useSelector } from 'react-redux'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
 import { Link } from 'react-router-dom'
-
 import OneRecipe from './OneRecipe'
+import SearchRecipe from './SearchRecipe'
 
 function Home () {
   
   const recipes = useSelector((state) => state.recipe)
     
-  const id= Math.floor(Math.random()*recipes.length)
+  const id = Math.floor(Math.random()*recipes.length)+1
   const recipe = recipes.find(element => {
     return element.id === id
   })
-
+console.log(id,recipe)
   return (
     <div>
-      <h2>Recipes</h2>
+{/*      
       <div className='recipeOfTheDay'>
-        <OneRecipe data={recipe} />
-      </div>
-
-      <div>
+        {recipe?<div>
+          <img src={recipe.img} />
+            <h2>Recipe of the moment</h2>
+        <p>{recipe.name}</p>
+        </div>:null
+        } 
+      
+      
+      </div> */}
+      
+   <div className="banner">
+    <h2 >Three ingredients cooking</h2>
+    <img src="/images/banner.jpg"  className="background"/> 
+    <p ><SearchRecipe /></p>
+   </div>
+   
+   <div className='category'>
         <button><a href='#vege'>Vegetables</a></button>
         <button><a href='#protein'>Protein</a></button>
         <button><a href='#grains'>Grains</a></button>

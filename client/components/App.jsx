@@ -28,6 +28,7 @@ function App() {
         <Route path="/add" element={<AddForm />} />
         <Route path="/recipe/:id" element={<Recipe />} />
       </Routes>
+      
     </>
   )
 }
