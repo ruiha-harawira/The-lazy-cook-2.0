@@ -4,18 +4,16 @@ import { useSelector } from 'react-redux'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
 import { Link } from 'react-router-dom'
-import OneRecipe from './OneRecipe'
 import SearchRecipe from './SearchRecipe'
 
 function Home () {
-  
   const recipes = useSelector((state) => state.recipe)
-    
-  const id = Math.floor(Math.random()*recipes.length)+1
+
+  const id = Math.floor(Math.random() * recipes.length) + 1
   const recipe = recipes.find(element => {
     return element.id === id
   })
-console.log(id,recipe)
+  console.log(id, recipe)
   return (
     <div>
       {/*      
@@ -49,10 +47,12 @@ console.log(id,recipe)
           <a href="#grains">Grains</a>
         </button>
       </div>
+
       <section>
         <div className="veggies">
           <Wrapper>
-            <h3 id="vege">Vege</h3>
+            <h3 id='vege'>Vegetables</h3>
+
             <Splide
               options={{
                 perPage: 3,
@@ -228,7 +228,7 @@ transition: transform 200ms ease-in-out;
   justify-content:center;
   align-item:flex-end;
   text-decoration: none;
-  background-color:dark;
+  background-color:green;
  }
 `
 // const CardText = styled.div`
