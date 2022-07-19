@@ -14,7 +14,7 @@ function AllRecipes({ data }) {
 
   return (
     <>
-      <h2>Recipes</h2>
+      <h1 className="recipesH1">All Recipes</h1>
       <div className="allRecipes">
         {recipes.map((recipe) => (
           <OneRecipe data={recipe} key={recipe.id} />
