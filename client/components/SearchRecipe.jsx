@@ -16,11 +16,11 @@ function SearchRecipe () {
   }
   return (
     <>
-      <div >
+      <div className = 'search'>
         <form onSubmit={handleSubmit}>
           <label>
 
-            <input onChange={handleTyping} name='search' value={search} type='text' >
+            <input onChange={handleTyping} name='search' value={search} type='text' placeholder ='Search...' >
 
             </input>
           </label>
