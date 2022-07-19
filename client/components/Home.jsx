@@ -170,11 +170,15 @@ position:relative;
   width:100%;
   height:100%;
   object-fit:cover;
-  transition: all 2s;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+-moz-transition: -moz-transform 200ms ease-in-out;
+-o-transition: -o-transform 200ms ease-in-out;
+transition: transform 200ms ease-in-out;
+
  };
 
- .front:hover{
-  display:none;
+ .front img:hover{
+  opacity:0;
  };
   
   .back{

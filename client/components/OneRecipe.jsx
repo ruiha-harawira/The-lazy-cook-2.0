@@ -9,18 +9,17 @@ function OneRecipe({ data }) {
     <>
       {data ? (
         <div>
-    
-          <div className="Image">
-            <img src={data.img} />
-          </div>
-          <div className="description">
-            <p>{data.name}</p>
-            <p>Ingredients:<br/>{data.ingredients}</p>
-          </div>
-          <div description>
-           
-            <p> <h3>Description:</h3><br/>{data.description}</p>
-           </div>
+          <p>{data.name}</p>
+          <p>{data.description}</p>
+          <p>Ingredients:</p>
+          <p>{data.ingredient1}</p>
+          <p>{data.ingredient2}</p>
+          <p>{data.ingredient3}</p>
+
+          <img src={data.img} />
+          <button onClick={() => dispatch(removeRecipe(data.id))}>
+            Delete
+          </button>
         </div>
       ) : null}
     </>
