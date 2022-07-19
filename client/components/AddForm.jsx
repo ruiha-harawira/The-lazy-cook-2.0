@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useState } from "react"
+import { useDispatch } from "react-redux"
 // import { addRecipe } from '../apis/RecipeApi'
 import { addNewRecipe } from '../actions/index'
 
@@ -116,7 +116,7 @@ function AddForm(props) {
         />
         <br />
         <label htmlFor="img">Upload image:</label>
-        <input type="file" id="myFile" name="filename" />
+        <input type="text" id="image" placeholder="your image" />
         <button>Send</button>
         <br />
       </form>

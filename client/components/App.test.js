@@ -1,19 +1,23 @@
-// import React from 'react'
-// import { Provider } from 'react-redux'
-// import { screen, render } from '@testing-library/react'
+import React from "react"
+// import nock from "nock"
+import { fetchRecipe } from "../apis/RecipeApi"
+import { expect } from "@jest/globals"
 
-// import App from './App'
-// import store from '../store'
-// import { fetchFruits } from '../actions'
+describe("fetchRecipe", () => {
+  test("dispatches fetchRecipe action", () => {
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    )
+    expect(fetchRecipe).toHaveBeenCalled()
+  })
+})
 
-// jest.mock('../actions')
-
-// fetchFruits.mockImplementation(() => () => {})
-
-// test('page header includes fruit', () => {
+// test('page header includes recipe', () => {
 //   render(<Provider store={store}><App /></Provider>)
 //   const heading = screen.getByRole('heading')
-//   expect(heading.innerHTML).toMatch(/Fruit/)
+//   expect(heading.innerHTML).toMatch(/recipes/)
 // })
 
 // test('renders an <li> for each fruit', () => {
@@ -24,9 +28,4 @@
 //   render(<Provider store={store}><App /></Provider>)
 //   const li = screen.getAllByRole('listitem')
 //   expect(li).toHaveLength(3)
-// })
-
-// test('dispatches fetchFruits action', () => {
-//   render(<Provider store={store}><App /></Provider>)
-//   expect(fetchFruits).toHaveBeenCalled()
 // })
