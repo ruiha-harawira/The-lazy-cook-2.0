@@ -11,6 +11,7 @@ body{
   width: 100vw;
   height: auto;
   position: relative;
+  margin-top: -2vh;
   
 
 }
@@ -22,13 +23,13 @@ body{
 .banner h2{
   font-family: 'Square Peg', cursive;
   z-index: 2;
-  font-size: 150px;
+  font-size: 12em;
   position: absolute;
   right:0;
   left:0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 150px;
   color: #fff;
   
 }
@@ -38,20 +39,62 @@ body{
   left:0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -200px;
+  margin-top: -430px;
   z-index: 2;
-  
 }
+
+.banner div{
+  position: absolute;
+  right:0;
+  left:0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -163px;
+  z-index: 2;
+}
+.category{
+  display:flex;
+ justify-content: space-around;
+  flex-direction: row;
+  width:62%;
+  margin-top: 10px;
+  margin-top: -100px;
+}
+.category button{
+  font-size: 20px;
+  font-family:monospace;
+  padding:20px 30px 20px 30px;
+  border-radius: 10px;
+  border-style: hidden;
+  background-color: #218f68
+
+}
+.category a{
+  color:aliceblue
+}
+
+.veggies, .protein, .grains{
+  text-align: center;
+  background-color: #c8d275 ;
+  font-size: 3em;
+  font-family: monospace;
+  padding: 2em;
+  margin: -100px 0;
+  color: white;
+  border-top: 2px solid black;
+}
+
 form{
   height:30px;
 }
 form button{
-  height:30px;
-  
+  height:50px;
+  border-radius: 20px;
+  margin-left: 10px;
   background-color: #218f68;
 }
 input{
-  height: 30px;
+  height: 50px;
   width:45%;
   border-radius: 20px;
 }
@@ -62,7 +105,7 @@ input{
   font-family: 'Square Peg', cursive;
   font-size: 40px;
   color: #000;
-  background-color: #2f4732;
+  background-color: #2f47326f;
   margin: auto;
   margin-top: -30px;
 }
@@ -96,32 +139,7 @@ img{
   height:400px;
 }
 
-.category{
-  display:flex;
- justify-content: space-around;
-  flex-direction: row;
-  margin-top: 10px;
 
-}
-.category button{
-  font-size: 20px;
-  font-family:monospace;
-  padding:20px 30px 20px 30px;
-  border-radius: 10px;
-  border-style: hidden;
-  background-color: #218f68
-
-}
-.category a{
-  color:aliceblue
-}
-
-#vege{
-  font-family: 'Square Peg', cursive;
-  font-size: 50px;
-  margin:20px 20px 20px 0px;
-  
-}
 .splide__container {
   box-sizing: border-box;
   position: relative;

@@ -4,47 +4,37 @@ import { useSelector } from 'react-redux'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
 import { Link } from 'react-router-dom'
-import OneRecipe from './OneRecipe'
 import SearchRecipe from './SearchRecipe'
 
 function Home () {
-  
   const recipes = useSelector((state) => state.recipe)
-    
-  const id = Math.floor(Math.random()*recipes.length)+1
+
+  const id = Math.floor(Math.random() * recipes.length) + 1
   const recipe = recipes.find(element => {
     return element.id === id
   })
-console.log(id,recipe)
+  console.log(id, recipe)
   return (
     <div>
-{/*      
-      <div className='recipeOfTheDay'>
-        {recipe?<div>
-          <img src={recipe.img} />
-            <h2>Recipe of the moment</h2>
-        <p>{recipe.name}</p>
-        </div>:null
-        } 
-      
-      
-      </div> */}
-      
-   <div className="banner">
-    <h2 >Three ingredients cooking</h2>
-    <img src="/images/banner.jpg"  className="background"/> 
-    <p ><SearchRecipe /></p>
-   </div>
-   
-   <div className='category'>
-        <button><a href='#vege'>Vegetables</a></button>
-        <button><a href='#protein'>Protein</a></button>
-        <button><a href='#grains'>Grains</a></button>
-    </div>
+
+      <div className="banner">
+        <h2 >Three ingredients cooking</h2>
+        <img src="/images/banner.jpg" className="background"/>
+        <p ><SearchRecipe /></p>
+        <div>
+          <div className='category'>
+            <button><a href='#vege'>Vegetables</a></button>
+            <button><a href='#protein'>Protein</a></button>
+            <button><a href='#grains'>Grains</a></button>
+          </div>
+        </div>
+
+      </div>
+
       <section>
         <div className='veggies'>
           <Wrapper>
-            <h3 id='vege'>Vegetable</h3>
+            <h3 id='vege'>Vegetables</h3>
             <Splide
               options={{
                 perPage: 3,
@@ -110,7 +100,7 @@ console.log(id,recipe)
         </div>
       </section>
       <section>
-        <div className='Grains'>
+        <div className='grains'>
           <Wrapper>
             <h3 id='grains'>Grains</h3>
             <Splide
@@ -143,7 +133,6 @@ console.log(id,recipe)
           </Wrapper>
         </div>
       </section>
-
 
     </div>
 
@@ -199,7 +188,7 @@ transition: transform 200ms ease-in-out;
   justify-content:center;
   align-item:flex-end;
   text-decoration: none;
-  background-color:dark;
+  background-color:green;
  }
 `
 // const CardText = styled.div`
