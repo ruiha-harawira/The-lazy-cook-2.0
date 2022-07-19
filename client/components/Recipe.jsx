@@ -7,7 +7,6 @@ import { removeRecipe } from '../actions/index'
 function Recipe() {
   const dispatch = useDispatch()
   const { id } = useParams()
-    console.log(id)
     const recipes = useSelector((state) => state.recipe)
     const data = recipes.find(element => {
       return element.id == id
@@ -18,8 +17,10 @@ function Recipe() {
     <div>
       <p>{data.name}</p>
       <p>{data.description}</p>
-      <p>{data.ingredients}</p>
-      <img src={data.img} />
+      <p>Ingredients:</p>
+      <p>{data.ingredient1}</p>
+      <p>{data.ingredient2}</p>
+      <p>{data.ingredient3}</p>      <img src={data.img} />
       <button onClick={()=> dispatch(removeRecipe(data.id))}>Delete</button>
     </div>:null}
    

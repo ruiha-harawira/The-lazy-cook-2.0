@@ -1,16 +1,19 @@
 import React, { useState } from "react"
 import { useDispatch } from "react-redux"
 // import { addRecipe } from '../apis/RecipeApi'
-import { addNewRecipe } from "../actions/index"
+import { addNewRecipe } from '../actions/index'
 
 function AddForm(props) {
   const dispatch = useDispatch()
+
   const [formData, setFormData] = useState({
-    name: "",
-    category: "",
-    ingredients: [],
-    description: "",
-    img: "",
+    name: '',
+    category: '',
+    ingredient1: '',
+    ingredient2: '',
+    ingredient3: '',
+    description: '',
+    img: '',
   })
 
   const handleSubmit = (e) => {
@@ -18,11 +21,14 @@ function AddForm(props) {
     const newRecipe = formData
 
     setFormData({
-      name: "",
-      category: "",
-      ingredients: [],
-      description: "",
-      img: "",
+      name: '',
+      category: '',
+
+      ingredient1: '',
+      ingredient2: '',
+      ingredient3: '',
+      description: '',
+      img: '',
     })
 
     dispatch(addNewRecipe(newRecipe))
@@ -73,10 +79,28 @@ function AddForm(props) {
           onChange={handleChange}
         />
         <br />
-        <label htmlFor="ingredients">Ingredients:</label>
+        <label htmlFor="ingredients">Ingredient 1:</label>
         <input
           id="ingredients"
-          name="ingredients"
+          name="ingredient1"
+          type="text"
+          value={formData.ingredients}
+          onChange={handleChange}
+        />
+        <br />
+        <label htmlFor="ingredients">Ingredient 2:</label>
+        <input
+          id="ingredients"
+          name="ingredient2"
+          type="text"
+          value={formData.ingredients}
+          onChange={handleChange}
+        />
+        <br />
+        <label htmlFor="ingredients">Ingredient 3:</label>
+        <input
+          id="ingredients"
+          name="ingredient3"
           type="text"
           value={formData.ingredients}
           onChange={handleChange}

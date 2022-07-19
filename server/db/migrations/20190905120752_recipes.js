@@ -5,7 +5,9 @@ exports.up = function (knex) {
     table.string('description')
     table.string('img')
     table.string('category')
-    table.string('ingredients')
+    table.string('ingredient1')
+    table.string('ingredient2')
+    table.string('ingredient3')
   })
 }
 
