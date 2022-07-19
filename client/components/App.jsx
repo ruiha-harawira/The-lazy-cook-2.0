@@ -9,7 +9,6 @@ import AddForm from "./AddForm";
 import Nav from "./Nav";
 import Recipe from "./Recipe";
 
-
 function App () {
   const recipes = useSelector((state) => state.recipe)
   const dispatch = useDispatch()
@@ -20,17 +19,18 @@ function App () {
 
   return (
     <>
+   
       <Nav className="nav" data={recipes}/>
-
+ 
+     
       <Routes>
         <Route path="/" element={<Home data={recipes} />} />
         <Route path="/all" element={<AllRecipes />} />
         <Route path="/all/:search" element={<AllRecipes />} />
         <Route path="/add" element={<AddForm />} />
         <Route path="/recipe/:id" element={<Recipe />} />
-
-
       </Routes>
+      
     </>
   )
 }

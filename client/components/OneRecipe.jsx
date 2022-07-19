@@ -1,25 +1,30 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
-import { removeRecipe } from '../actions/index'
+import React from "react";
+import { useDispatch } from "react-redux";
+import { removeRecipe } from "../actions/index";
 
 function OneRecipe({ data }) {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <>
       {data ? (
         <div>
-          <p>{data.name}</p>
-          <p>{data.description}</p>
-          <p>{JSON.parse(data.ingredients).join('hello')}</p>
-          <img src={data.img} />
-          <button onClick={() => dispatch(removeRecipe(data.id))}>
-            Delete
-          </button>
+    
+          <div className="Image">
+            <img src={data.img} />
+          </div>
+          <div className="description">
+            <p>{data.name}</p>
+            <p>Ingredients:<br/>{data.ingredients}</p>
+          </div>
+          <div description>
+           
+            <p> <h3>Description:</h3><br/>{data.description}</p>
+           </div>
         </div>
       ) : null}
     </>
-  )
+  );
 }
 
-export default OneRecipe
+export default OneRecipe;
