@@ -16,7 +16,7 @@ function SearchRecipe () {
   }
   return (
     <>
-      <div >
+      <div className = 'search'>
         <form onSubmit={handleSubmit}>
           <label>
 
