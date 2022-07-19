@@ -34,9 +34,8 @@ function Home () {
         <p>
           <SearchRecipe />
         </p>
-      </div>
 
-      <div className="category">
+        <div className="category">
         <button>
           <a href="#vege">Vegetables</a>
         </button>
@@ -47,6 +46,9 @@ function Home () {
           <a href="#grains">Grains</a>
         </button>
       </div>
+      </div>
+
+      
 
       <section>
         <div className="veggies">
@@ -133,7 +135,7 @@ function Home () {
         </div>
       </section>
       <section>
-        <div className="Grains">
+        <div className="grains">
           <Wrapper>
             <h3 id="grains">Grains</h3>
             <Splide

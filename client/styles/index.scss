@@ -9,9 +9,10 @@ body{
 
 .background{
   width: 100vw;
+  height:100vh;
   height: auto;
   position: relative;
-  margin-top: -2vh;
+  margin-top: -8vh;
   
 
 }
@@ -23,13 +24,13 @@ body{
 .banner h2{
   font-family: 'Square Peg', cursive;
   z-index: 2;
-  font-size: 12em;
+  font-size: 15vh;
   position: absolute;
   right:0;
   left:0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
+  margin-top: 23vh;
   color: #fff;
   
 }
@@ -39,7 +40,7 @@ body{
   left:0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -430px;
+  margin-top: -45vh;
   z-index: 2;
 }
 
@@ -49,28 +50,30 @@ body{
   left:0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -163px;
-  z-index: 2;
+  margin-top: -30vh;
+  z-index: 5;
 }
 .category{
   display:flex;
- justify-content: space-around;
+ justify-content: space-evenly;
   flex-direction: row;
-  width:62%;
+  width:50vw;
   margin-top: 10px;
   margin-top: -100px;
+  height:5vh;
 }
 .category button{
+  height:5vh;
+  width:11vw;
   font-size: 20px;
   font-family:monospace;
-  padding:20px 30px 20px 30px;
-  border-radius: 10px;
+  border-radius: 40px;
   border-style: hidden;
-  background-color: #218f68
+  background-color: #95423a;
 
 }
 .category a{
-  color:aliceblue
+  color:aliceblue;
 }
 
 .veggies, .protein, .grains{
@@ -81,32 +84,53 @@ body{
   padding: 2em;
   margin: -100px 0;
   color: white;
-  border-top: 2px solid black;
+  border-top: 2px solid rgb(255, 255, 255);
 }
-
-form{
-  height:30px;
+nav{
+  position:absolute;
+  z-index:5;
 }
-form button{
-  height:50px;
-  border-radius: 20px;
-  margin-left: 10px;
-  background-color: #218f68;
+.search form{
+  background-color: white;
+  display: flex;
+  padding: 2px;
+  border: 1px solid currentColor;
+  border-radius: 40px;
+  margin-left:25vw;
+  width:50vw;
+  height:5vh;
 }
-input{
-  height: 50px;
-  width:45%;
-  border-radius: 20px;
-
-
-
+.search form button{
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+  margin-left:30vw;
 }
-.nav{
+.search input{
+  width:100%;
+  border: none;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background-color: transparent;
+}
+ .nav{
+  width:100vw;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: 'Square Peg', cursive;
-  font-size: 40px;
+  font-size: 3em;
   color: #000;
   background-color: #2f47326f;
   margin: auto;
@@ -238,6 +262,34 @@ img{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SPLIDERS
 .splide__container {
   box-sizing: border-box;
   position: relative;
@@ -249,8 +301,7 @@ img{
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
+ 
 }
 
 .splide.is-initialized:not(.is-active) .splide__list {
