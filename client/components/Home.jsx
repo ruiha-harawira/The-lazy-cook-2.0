@@ -40,11 +40,11 @@ console.log(id,recipe)
         <button><a href='#vege'>Vegetables</a></button>
         <button><a href='#protein'>Protein</a></button>
         <button><a href='#grains'>Grains</a></button>
-      </div>
+    </div>
       <section>
         <div className='veggies'>
           <Wrapper>
-            <h3 id='vege'>Vege</h3>
+            <h3 id='vege'>Vegetable</h3>
             <Splide
               options={{
                 perPage: 3,

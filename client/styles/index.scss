@@ -115,6 +115,13 @@ img{
 .category a{
   color:aliceblue
 }
+
+#vege{
+  font-family: 'Square Peg', cursive;
+  font-size: 50px;
+  margin:20px 20px 20px 0px;
+  
+}
 .splide__container {
   box-sizing: border-box;
   position: relative;
@@ -126,8 +133,7 @@ img{
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
+ 
 }
 
 .splide.is-initialized:not(.is-active) .splide__list {
