@@ -1,38 +1,34 @@
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import React,{useState} from 'react'
-import { useNavigate} from 'react-router-dom';
-
-
-function SearchRecipe() {
+function SearchRecipe () {
   const navigate = useNavigate()
-  const [search, setSearch]=useState('')
+  const [search, setSearch] = useState('')
 
-  const handleTyping = (e)=>{
+  const handleTyping = (e) => {
     setSearch(e.target.value)
   }
 
-  const handleSubmit=(e)=>{
-   
+  const handleSubmit = (e) => {
     e.preventDefault()
-    navigate('/all/'+search) 
-    console.log(search) 
-   
+    navigate('/all/' + search)
+    console.log(search)
   }
   return (
     <>
-    <div > 
-      <form onSubmit={handleSubmit}>
-      <label>
-        
-        <input onChange={handleTyping} name='search'  value={search} type='text'  >
-         
-        </input>
-      </label>
-       <button>Search</button>
-    </form> 
-    </div>
+      <div >
+        <form onSubmit={handleSubmit}>
+          <label>
+
+            <input onChange={handleTyping} name='search' value={search} type='text' >
+
+            </input>
+          </label>
+          <button>Search</button>
+        </form>
+      </div>
     </>
-   
+
   )
 }
 
