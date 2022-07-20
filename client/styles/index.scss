@@ -161,10 +161,9 @@ color:#fff;
 }
 
 .container {
-  position: relative;
-  padding: 50px 50px;
+position: relative;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 2px;
   width:480px;
   border: 20px green;
   padding: 40px;
@@ -192,7 +191,7 @@ color:#fff;
   padding: 10px;
   color: #000;
   letter-spacing: 5px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-weight: bold;
   padding-left: 10px;
   font-family: 'Square Peg', cursive;
@@ -294,12 +293,16 @@ color:#fff;
 }
 
 fieldset {
+
   border: 3px solid black;
- 
-
-
 
 }
+
+#add {
+padding-top:30%;
+}
+
+
 
 
 

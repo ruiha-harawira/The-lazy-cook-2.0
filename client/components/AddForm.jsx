@@ -46,7 +46,7 @@ function AddForm(props) {
     <>
     <div class="container">
      
-      <form onSubmit={handleSubmit}>
+      <form id="add" onSubmit={handleSubmit}>
         <fieldset> 
         <h1> Add your own recipe </h1>
         <div class="inputbox">
