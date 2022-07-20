@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-export function fetchRecipe() {
+export function fetchRecipe () {
   return request.get('/api/v1/recipes/').then((res) => {
     return res.body
   })
@@ -22,3 +22,4 @@ export function postRecipe(newRecipe) {
 export function deleteOneRecipe(id) {
   return request.delete(`/api/v1/recipes/${id}`).then((res) => res)
 }
+

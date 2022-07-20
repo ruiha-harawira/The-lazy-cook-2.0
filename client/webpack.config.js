@@ -1,6 +1,8 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+// , './client/styles/index.scss'
+
 module.exports = {
   entry: ['./client/index.js', './client/styles/index.scss'],
   output: {

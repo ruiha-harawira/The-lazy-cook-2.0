@@ -6,6 +6,9 @@
   "keywords": [
     "fullstack"
   ],
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "node server",
     "test": "jest",
@@ -43,6 +46,7 @@
     "@vscode/sqlite3": "^5.0.7",
     "express": "^4.17.1",
     "knex": "^1.0.2",
+    "nock": "^13.2.8",
     "pg": "^8.5.1",
     "styled-components": "^5.3.5",
     "superagent": "^6.1.0"
