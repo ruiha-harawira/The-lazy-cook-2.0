@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 body {
   padding: 0;
@@ -346,9 +346,23 @@ padding-top:30%;
 
 //one recipe
 
-.onerecipe{
- margin-top: 300px !important
+.oneRecipe{
+  padding-top: 150px;
+  font-size: 25px;
+  text-align: center;
 }
+.oneRecipe h3{
+  font-size: 35px;
+  font-family: 'Dancing Script', cursive;
+}
+
+
+
+
+
+
+
+
 
 // SPLIDERS
 .splide__container {

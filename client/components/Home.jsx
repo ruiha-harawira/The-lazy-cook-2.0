@@ -67,7 +67,7 @@ function Home () {
                   return (
                     <SplideSlide key={recipeVege.id}>
                       <Card>
-                        <div className='onerecipe'>
+                      
                         <Link to={'/recipe/' + recipeVege.id}>
                           
                         
@@ -83,7 +83,7 @@ function Home () {
                             </p>
                           </div>
                         </Link>
-                        </div>
+                      
                       </Card>
                     </SplideSlide>
                   )
@@ -230,7 +230,7 @@ const Card = styled.div`
     justify-content: center;
     align-item: flex-end;
     text-decoration: none;
-    background-color: green;
+    background-color:#67bf7d;
   }
 `
 // const CardText = styled.div`

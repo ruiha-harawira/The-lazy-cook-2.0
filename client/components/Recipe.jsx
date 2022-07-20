@@ -14,10 +14,10 @@ function Recipe() {
   return (
     <>
     {data?
-    <div>
-      <p>{data.name}</p>
+    <div className='oneRecipe'>
+      <h3>{data.name}</h3>
       <p>{data.description}</p>
-      <p>Ingredients:</p>
+      <h3>Ingredients:</h3>
       <p>{data.ingredient1}</p>
       <p>{data.ingredient2}</p>
       <p>{data.ingredient3}</p>      <img src={data.img} />
