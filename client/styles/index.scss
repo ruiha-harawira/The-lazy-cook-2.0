@@ -24,13 +24,13 @@ body{
 .banner h2{
   font-family: 'Square Peg', cursive;
   z-index: 2;
-  font-size: 15vh;
+  font-size: 20vh;
   position: absolute;
   right:0;
   left:0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 23vh;
+  margin-top: 30vh;
   color: #fff;
   
 }
@@ -96,6 +96,7 @@ nav{
   border: 1px solid currentColor;
   border-radius: 40px;
   margin-left:25vw;
+  margin-top: -70px;
   width:50vw;
   height:5vh;
   position: relative;
