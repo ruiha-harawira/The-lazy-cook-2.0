@@ -30,13 +30,13 @@ body {
 .banner h2 {
   font-family: 'Square Peg', cursive;
   z-index: 2;
-  font-size: 15vh;
+  font-size: 20vh;
   position: absolute;
   right: 0;
   left: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 23vh;
+  margin-top: 30vh;
   color: #fff;
 
 }
@@ -110,10 +110,10 @@ nav {
   border: 1px solid currentColor;
   border-radius: 40px;
   margin-left:25vw;
+  margin-top: -70px;
   width:50vw;
   height:5vh;
   position: relative;
-
 }
 
 .search form button {
@@ -127,6 +127,7 @@ nav {
   background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
   cursor: pointer;
   opacity: 0.7;
+ 
 }
 .search input{
   width:80%;
@@ -147,7 +148,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   font-family: 'Square Peg', cursive;
-  font-size: 3em;
+  font-size: 4em;
   color: #000;
   background-color: #2f47326f;
   margin: auto;
@@ -159,9 +160,8 @@ nav {
 
 }
 
-
 .nav p {
-  padding: 0 10px;
+  padding: 0 100px;
   margin-bottom: 5px;
 }
 
@@ -183,16 +183,18 @@ a {
 
 .container {
 position: relative;
-  background: #fff;
-  border-radius: 2px;
-  width:480px;
-  border: 20px rgb(90, 158, 90);
-  padding: 40px;
+  background:#c8d275;
+  border-radius: 5px;
+  width:500px;
+  border: 20px green;
+  padding: 50px;
   margin: auto;
   text-align: center;
 
 
 }
+
+
 
 // .container body {
 //   margin: 0;
@@ -208,7 +210,7 @@ position: relative;
 // }
 
 .container h1 {
-  font-size: 3em;
+  font-size: 4em;
   padding: 10px;
   color: #000;
   letter-spacing: 5px;
@@ -225,9 +227,11 @@ position: relative;
   width: 250px;
   height: -20px;
   margin-bottom: 50px;
-  // margin:40px;
+ 
   padding: 10px;
-  margin-left:70px;
+  margin-left:0px;
+  margin-right: 20%;
+
 
 
 
@@ -238,7 +242,7 @@ position: relative;
   position: absolute;
   top: 0;
   left: 20%;
-  width: 100%;
+  width: 250px;
   height: 30px;
   border: 2px solid #000;
   outline: none;
@@ -246,6 +250,9 @@ position: relative;
   padding: 5px;
   border-radius: 10px;
   font-size: 1.2em;
+  background-color: white;
+  margin-left: 150px;
+  margin-bottom: 40px;
  
   
  
@@ -254,13 +261,20 @@ position: relative;
 .container .inputbox label {
   position: absolute;
   top: 50px;
-  left: 20px;
-  font-size: 1em;
+  left: 0px;
+  font-size: 2em;
   transition: 0.6s;
   font-family: sans-serif;
+  font-weight: bold;
   margin: -30%;
-  margin-top: -33px;
-  margin-bottom: 40px;
+  margin-top: -40px;
+  margin-bottom: 45px;
+  // margin-right: 100%;
+  margin-left:30px;
+  padding: -5px;
+
+  
+  font-family: 'Square Peg', cursive;
 
 
 }
@@ -270,24 +284,26 @@ position: relative;
   flex-direction: row;
   float: left;
   padding-bottom: 8px;
-  margin-left: 50px;
+  margin-left: 70px;
   margin-top:-20px;
 
 }
 
 .radioinputbox label {
  margin-top: 8px;
+ font-size: 1.3em;
 }
 
 .container .inputboxD input {
   position: relative;
-  width: 240px;
+  width: 250px;
   height: -20px;
   margin-bottom: 10px;
   // margin:40px;
   padding: 20px;
-  margin-left:45px;
+  margin-left:80px;
   border: 2px solid #000;
+  border-radius: 10px;
 
 }
 
@@ -295,9 +311,10 @@ position: relative;
   position: absolute;
   top: 50px;
   left: 20px;
-  font-size: 1em;
+  font-size: 2.5em;
+  font-weight: bold;
   transition: 0.6s;
-  font-family: sans-serif;
+  font-family: 'Square Peg', cursive;
   margin: -30%;
   margin-top: -33px;
   margin-bottom: 40px;
@@ -312,16 +329,19 @@ position: relative;
   // margin:40px;
   padding: 10px;
   margin-left:70px;
+  border-radius: 5px;
 }
 
 fieldset {
 
   border: 3px solid black;
-
+background-color: rgb(253, 221, 184);
+width: 600px;
 }
 
 #add {
 padding-top:30%;
+
 }
 
 //one recipe
