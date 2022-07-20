@@ -90,6 +90,7 @@ function AddForm(props) {
               />
             </div>
             <br />
+            <br/>
             <div class="inputbox">
               <label htmlFor="ingredients">Ingredient 1:</label>
               <input
