@@ -373,12 +373,17 @@ padding-top:30%;
   .search form {
     margin-top: 100px;
   }
-
-  
 }
 
-
-
+ @media screen and (max-width:390px) {
+  .nav{
+    width: 100wh;
+  }
+  .nav p{
+    display: inline-flex;
+    padding:2px;
+  }
+ }
 
 
 // SPLIDERS
