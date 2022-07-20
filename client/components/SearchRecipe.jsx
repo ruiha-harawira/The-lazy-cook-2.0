@@ -19,10 +19,7 @@ function SearchRecipe () {
       <div className = 'search'>
         <form onSubmit={handleSubmit}>
           <label>
-
-            <input onChange={handleTyping} name='search' value={search} type='text' placeholder ='Search...' >
-
-            </input>
+            <input onChange={handleTyping} name='search' value={search} type='text' placeholder ='Search...' />    
           </label>
           <button>Search</button>
         </form>
