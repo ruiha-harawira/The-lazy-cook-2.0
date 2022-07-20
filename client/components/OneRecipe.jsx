@@ -23,8 +23,9 @@ function OneRecipe ({ data }) {
           </button>
         </div>
       ) : null}
-    </>
-  )
+  </> );
+ 
+
 }
 
 export default OneRecipe
