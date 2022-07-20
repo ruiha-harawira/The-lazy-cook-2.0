@@ -70,7 +70,10 @@ function Home () {
                   return (
                     <SplideSlide key={recipeVege.id}>
                       <Card>
+                        <div className='onerecipe'>
                         <Link to={'/recipe/' + recipeVege.id}>
+                          
+                        
                           <div className="front">
                             <img src={recipeVege.img} alt={recipeVege.name} />
                           </div>
@@ -83,6 +86,7 @@ function Home () {
                             </p>
                           </div>
                         </Link>
+                        </div>
                       </Card>
                     </SplideSlide>
                   )

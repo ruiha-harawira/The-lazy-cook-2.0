@@ -6,9 +6,9 @@ function OneRecipe({ data }) {
   const dispatch = useDispatch();
 
   return (
-    <>
+  <>
       {data ? (
-        <div>
+         <div className="onerecipe">
           <p>{data.name}</p>
           <p>{data.description}</p>
           <p>Ingredients:</p>
@@ -22,8 +22,8 @@ function OneRecipe({ data }) {
           </button>
         </div>
       ) : null}
-    </>
-  );
+  </> );
+ 
 }
 
 export default OneRecipe;
