@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 // import { addRecipe } from '../apis/RecipeApi'
 import { addNewRecipe } from '../actions/index'
 
-function AddForm (props) {
+function AddForm(props) {
   const dispatch = useDispatch()
 
   const [formData, setFormData] = useState({
@@ -13,7 +13,7 @@ function AddForm (props) {
     ingredient2: '',
     ingredient3: '',
     description: '',
-    img: ''
+    img: '',
   })
 
   const handleSubmit = (e) => {
@@ -28,7 +28,7 @@ function AddForm (props) {
       ingredient2: '',
       ingredient3: '',
       description: '',
-      img: ''
+      img: '',
     })
 
     dispatch(addNewRecipe(newRecipe))
@@ -38,17 +38,17 @@ function AddForm (props) {
     console.log(e.target, e.target.value)
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     })
   }
 
   return (
     <>
-      <div className="container">
-        <form onSubmit={handleSubmit}>
+      <div class="container">
+        <form id="add" onSubmit={handleSubmit}>
           <fieldset>
             <h1> Add your own recipe </h1>
-            <div className="inputbox">
+            <div class="inputbox">
               <label htmlFor="name">Name:</label>
               <input
                 id="name"
@@ -59,8 +59,8 @@ function AddForm (props) {
               />
             </div>
             <br />
-            <div className="radioinputbox">
-              <label htmlFor="vegetable">Vegetable</label>
+            <div class="radioinputbox">
+              <label for="vegetable">Vegetable</label>
               <input
                 type="radio"
                 id="vegetable"
@@ -69,8 +69,8 @@ function AddForm (props) {
                 onChange={handleChange}
               />
             </div>
-            <div className="radioinputbox">
-              <label htmlFor="protein">Protein</label>
+            <div class="radioinputbox">
+              <label for="protein">Protein</label>
               <input
                 type="radio"
                 id="protein"
@@ -79,8 +79,8 @@ function AddForm (props) {
                 onChange={handleChange}
               />
             </div>
-            <div className="radioinputbox">
-              <label htmlFor="grains">Grains</label>
+            <div class="radioinputbox">
+              <label for="grains">Grains</label>
               <input
                 type="radio"
                 id="grains"
@@ -90,7 +90,7 @@ function AddForm (props) {
               />
             </div>
             <br />
-            <div className="inputbox">
+            <div class="inputbox">
               <label htmlFor="ingredients">Ingredient 1:</label>
               <input
                 id="ingredients"
@@ -100,7 +100,7 @@ function AddForm (props) {
                 onChange={handleChange}
               />
             </div>
-            <div className="inputbox">
+            <div class="inputbox">
               <label htmlFor="ingredients">Ingredient 2:</label>
               <input
                 id="ingredients"
@@ -110,7 +110,7 @@ function AddForm (props) {
                 onChange={handleChange}
               />
             </div>
-            <div className="inputbox">
+            <div class="inputbox">
               <label htmlFor="ingredients">Ingredient 3:</label>
               <input
                 id="ingredients"
@@ -120,7 +120,7 @@ function AddForm (props) {
                 onChange={handleChange}
               />
             </div>
-            <div className="inputbox">
+            <div class="inputboxD">
               <label htmlFor="description">Description:</label>
               <input
                 id="description"
@@ -130,7 +130,7 @@ function AddForm (props) {
                 onChange={handleChange}
               />
             </div>
-            <div className="inputbox">
+            <div class="inputbox">
               <label htmlFor="img">Upload image:</label>
               <input type="file" id="image" placeholder="your image" />
             </div>
