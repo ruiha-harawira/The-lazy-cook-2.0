@@ -1,14 +1,14 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { removeRecipe } from "../actions/index";
+import React from 'react'
+import { useDispatch } from 'react-redux'
+import { removeRecipe } from '../actions/index'
 
-function OneRecipe({ data }) {
-  const dispatch = useDispatch();
+function OneRecipe ({ data }) {
+  const dispatch = useDispatch()
 
   return (
     <>
       {data ? (
-        <div>
+        <div className='oneIngredient'>
           <p className='name'>{data.name}</p>
           <p>{data.description}</p>
           <p className='ingredients'>Ingredients:</p>
@@ -24,7 +24,7 @@ function OneRecipe({ data }) {
         </div>
       ) : null}
     </>
-  );
+  )
 }
 
-export default OneRecipe;
+export default OneRecipe

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 // import { addRecipe } from '../apis/RecipeApi'
 import { addNewRecipe } from '../actions/index'
 
-function AddForm(props) {
+function AddForm (props) {
   const dispatch = useDispatch()
 
   const [formData, setFormData] = useState({
@@ -13,7 +13,7 @@ function AddForm(props) {
     ingredient2: '',
     ingredient3: '',
     description: '',
-    img: '',
+    img: ''
   })
 
   const handleSubmit = (e) => {
@@ -28,7 +28,7 @@ function AddForm(props) {
       ingredient2: '',
       ingredient3: '',
       description: '',
-      img: '',
+      img: ''
     })
 
     dispatch(addNewRecipe(newRecipe))
@@ -38,88 +38,106 @@ function AddForm(props) {
     console.log(e.target, e.target.value)
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     })
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <br />
-        <label for="vegetable">Vegetable</label>
-        <input
-          type="radio"
-          id="vegetable"
-          name="category"
-          value={formData.category}
-          onChange={handleChange}
-        />
-        <label for="protein">Protein</label>
-        <input
-          type="radio"
-          id="protein"
-          name="category"
-          value={formData.category}
-          onChange={handleChange}
-        />
-        <label for="grains">Grains</label>
-        <input
-          type="radio"
-          id="grains"
-          name="category"
-          value={formData.category}
-          onChange={handleChange}
-        />
-        <br />
-        <label htmlFor="ingredients">Ingredient 1:</label>
-        <input
-          id="ingredients"
-          name="ingredient1"
-          type="text"
-          value={formData.ingredients}
-          onChange={handleChange}
-        />
-        <br />
-        <label htmlFor="ingredients">Ingredient 2:</label>
-        <input
-          id="ingredients"
-          name="ingredient2"
-          type="text"
-          value={formData.ingredients}
-          onChange={handleChange}
-        />
-        <br />
-        <label htmlFor="ingredients">Ingredient 3:</label>
-        <input
-          id="ingredients"
-          name="ingredient3"
-          type="text"
-          value={formData.ingredients}
-          onChange={handleChange}
-        />
-        <br />
-        <label htmlFor="description">Description:</label>
-        <input
-          id="description"
-          name="description"
-          type="text"
-          value={formData.description}
-          onChange={handleChange}
-        />
-        <br />
-        <label htmlFor="img">Upload image:</label>
-        <input type="text" id="image" placeholder="your image" />
-        <button>Send</button>
-        <br />
-      </form>
+      <div className="container">
+        <form onSubmit={handleSubmit}>
+          <fieldset>
+            <h1> Add your own recipe </h1>
+            <div className="inputbox">
+              <label htmlFor="name">Name:</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
+            <br />
+            <div className="radioinputbox">
+              <label htmlFor="vegetable">Vegetable</label>
+              <input
+                type="radio"
+                id="vegetable"
+                name="category"
+                value={formData.category}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="radioinputbox">
+              <label htmlFor="protein">Protein</label>
+              <input
+                type="radio"
+                id="protein"
+                name="category"
+                value={formData.category}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="radioinputbox">
+              <label htmlFor="grains">Grains</label>
+              <input
+                type="radio"
+                id="grains"
+                name="category"
+                value={formData.category}
+                onChange={handleChange}
+              />
+            </div>
+            <br />
+            <div className="inputbox">
+              <label htmlFor="ingredients">Ingredient 1:</label>
+              <input
+                id="ingredients"
+                name="ingredient1"
+                type="text"
+                value={formData.ingredients}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="inputbox">
+              <label htmlFor="ingredients">Ingredient 2:</label>
+              <input
+                id="ingredients"
+                name="ingredient2"
+                type="text"
+                value={formData.ingredients}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="inputbox">
+              <label htmlFor="ingredients">Ingredient 3:</label>
+              <input
+                id="ingredients"
+                name="ingredient3"
+                type="text"
+                value={formData.ingredients}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="inputbox">
+              <label htmlFor="description">Description:</label>
+              <input
+                id="description"
+                name="description"
+                type="text"
+                value={formData.description}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="inputbox">
+              <label htmlFor="img">Upload image:</label>
+              <input type="file" id="image" placeholder="your image" />
+            </div>
+            <button>Send</button>
+          </fieldset>
+        </form>
+      </div>
     </>
   )
 }
