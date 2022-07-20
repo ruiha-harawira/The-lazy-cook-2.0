@@ -10,22 +10,21 @@ function Home () {
   const recipes = useSelector((state) => state.recipe)
 
   const id = Math.floor(Math.random() * recipes.length) + 1
-  const recipe = recipes.find(element => {
+  const recipe = recipes.find((element) => {
     return element.id === id
   })
   console.log(id, recipe)
   return (
     <div>
-      {/*      
+      {/*
       <div className='recipeOfTheDay'>
         {recipe?<div>
           <img src={recipe.img} />
             <h2>Recipe of the moment</h2>
         <p>{recipe.name}</p>
         </div>:null
-        } 
-      
-      
+        }
+
       </div> */}
 
       <div className="banner">
@@ -36,24 +35,22 @@ function Home () {
         </p>
 
         <div className="category">
-        <button>
-          <a href="#vege">Vegetables</a>
-        </button>
-        <button>
-          <a href="#protein">Protein</a>
-        </button>
-        <button>
-          <a href="#grains">Grains</a>
-        </button>
+          <button>
+            <a href="#vege">Vegetables</a>
+          </button>
+          <button>
+            <a href="#protein">Protein</a>
+          </button>
+          <button>
+            <a href="#grains">Grains</a>
+          </button>
+        </div>
       </div>
-      </div>
-
-      
 
       <section>
         <div className="veggies">
           <Wrapper>
-            <h3 id='vege'>Vegetables</h3>
+            <h3 id="vege">Vegetables</h3>
 
             <Splide
               options={{
@@ -61,7 +58,7 @@ function Home () {
                 arrows: false,
                 pagination: false,
                 drag: 'free',
-                gap: '5rem',
+                gap: '5rem'
               }}
             >
               {recipes
@@ -80,9 +77,9 @@ function Home () {
                           <div className="back">
                             <p>{recipeVege.name}</p>
                             <p>
-                              {recipeVege.ingredient1} <br/>
-                              {recipeVege.ingredient2} <br/>
-                              {recipeVege.ingredient3} <br/>
+                              {recipeVege.ingredient1} <br />
+                              {recipeVege.ingredient2} <br />
+                              {recipeVege.ingredient3} <br />
                             </p>
                           </div>
                         </Link>
@@ -105,7 +102,7 @@ function Home () {
                 arrows: false,
                 pagination: false,
                 drag: 'free',
-                gap: '5rem',
+                gap: '5rem'
               }}
             >
               {recipes
@@ -124,9 +121,9 @@ function Home () {
                           <div className="back">
                             <p>{recipeProtein.name}</p>
                             <p>
-                              {recipeProtein.ingredient1} <br/>
-                              {recipeProtein.ingredient2} <br/>
-                              {recipeProtein.ingredient3} <br/>
+                              {recipeProtein.ingredient1} <br />
+                              {recipeProtein.ingredient2} <br />
+                              {recipeProtein.ingredient3} <br />
                             </p>
                           </div>
                         </Link>
@@ -148,7 +145,7 @@ function Home () {
                 arrows: false,
                 pagination: false,
                 drag: 'free',
-                gap: '5rem',
+                gap: '5rem'
               }}
             >
               {recipes
@@ -167,9 +164,9 @@ function Home () {
                           <div className="back">
                             <p>{recipeGrains.name}</p>
                             <p>
-                              { recipeGrains.ingredient1 } <br/>
-                              { recipeGrains.ingredient2 } <br/>
-                              { recipeGrains.ingredient3 } <br/>
+                              {recipeGrains.ingredient1} <br />
+                              {recipeGrains.ingredient2} <br />
+                              {recipeGrains.ingredient3} <br />
                             </p>
                           </div>
                         </Link>
@@ -185,57 +182,56 @@ function Home () {
   )
 }
 const Wrapper = styled.div`
-margin: 4rem 0rem;
-.splide__list{
-  display:flex;
-}
+  margin: 4rem 0rem;
+  .splide__list {
+    display: flex;
+  }
 `
 
 const Card = styled.div`
-min-height:25rem;
-border-radius:2rem;
-ovweflow:hidden;
-position:relative;
+  min-height: 25rem;
+  border-radius: 2rem;
+  ovweflow: hidden;
+  position: relative;
 
- .front img{
-  border-radius:2rem;
-  position:absolute;
-  z-index:10;
-  left:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
--moz-transition: -moz-transform 200ms ease-in-out;
--o-transition: -o-transform 200ms ease-in-out;
-transition: transform 200ms ease-in-out;
+  .front img {
+    border-radius: 2rem;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-transition: -webkit-transform 200ms ease-in-out;
+    -moz-transition: -moz-transform 200ms ease-in-out;
+    -o-transition: -o-transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out;
+  }
 
- };
+  .front img:hover {
+    opacity: 0;
+  }
 
- .front img:hover{
-  opacity:0;
- };
-  
-  .back{
-  border-radius:2rem;
+  .back {
+    border-radius: 2rem;
 
-  background-color:blue;
-  position:absolute;
-  
-  left:0%;
-  color:white;
-  width:100%;
-  text-align:center;
-  font-weight:600;
-  font-size:20px;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-item:flex-end;
-  text-decoration: none;
-  background-color:green;
- }
+    background-color: blue;
+    position: absolute;
+
+    left: 0%;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-item: flex-end;
+    text-decoration: none;
+    background-color: green;
+  }
 `
 // const CardText = styled.div`
 //   p:active{

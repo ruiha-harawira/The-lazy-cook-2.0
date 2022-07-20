@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 import { useSelector } from 'react-redux'
 
-
 function Nav () {
   // const recipes = useSelector((state) => state.recipe)
   // const = recipes.find(element => {
@@ -19,7 +18,7 @@ function Nav () {
         </div>
 
       </nav>
-     
+
     </>
   )
 }
