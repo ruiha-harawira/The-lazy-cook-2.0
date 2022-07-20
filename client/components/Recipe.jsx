@@ -19,7 +19,7 @@ function Recipe() {
           <h3>Ingredients:</h3>
           <p>{data.ingredient1}</p>
           <p>{data.ingredient2}</p>
-          <p>{data.ingredient3}</p> <img src={data.img} />
+          <p>{data.ingredient3}</p> <img className='allRecipeImg' src={data.img} />
           <br />
           <button
             className="btn-2"
