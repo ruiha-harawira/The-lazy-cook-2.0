@@ -1,6 +1,6 @@
 import { fetchRecipe, postRecipe, deleteOneRecipe } from '../apis/RecipeApi'
 
-//vars
+// vars
 export const RECEIVE_RECIPE = 'RECEIVE_RECIPE'
 export const REQUEST_ALL_RECIPES = 'REQUEST_ALL_RECIPES'
 export const ADD_RECIPE = 'ADD_RECIPE'
