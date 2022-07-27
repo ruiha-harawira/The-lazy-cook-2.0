@@ -14,12 +14,15 @@ function AllRecipes ({ data }) {
 
   return (
     <>
-      <h1 className="recipesH1">All Recipes</h1>
-      <div className="allRecipes">
-        {recipes.map((recipe) => (
-          <OneRecipe data={recipe} key={recipe.id} />
-        ))}
+      <div className='contain'>
+        <h1 className="recipesH1">All Recipes</h1>
+        <div className="allRecipes">
+          {recipes.map((recipe) => (
+            <OneRecipe data={recipe} key={recipe.id} />
+          ))}
+        </div>
       </div>
+
     </>
   )
 }
