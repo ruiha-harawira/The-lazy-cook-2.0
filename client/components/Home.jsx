@@ -55,6 +55,11 @@ function Home () {
             <Splide
               options={{
                 perPage: 3,
+                breakpoints: {
+                  640: {
+                    perPage: 1
+                  }
+                },
                 arrows: false,
                 pagination: false,
                 drag: 'free',
@@ -67,10 +72,9 @@ function Home () {
                   return (
                     <SplideSlide key={recipeVege.id}>
                       <Card>
-                      
+
                         <Link to={'/recipe/' + recipeVege.id}>
-                          
-                        
+
                           <div className="front">
                             <img src={recipeVege.img} alt={recipeVege.name} />
                           </div>
@@ -83,7 +87,7 @@ function Home () {
                             </p>
                           </div>
                         </Link>
-                      
+
                       </Card>
                     </SplideSlide>
                   )
@@ -99,6 +103,11 @@ function Home () {
             <Splide
               options={{
                 perPage: 3,
+                breakpoints: {
+                  640: {
+                    perPage: 1
+                  }
+                },
                 arrows: false,
                 pagination: false,
                 drag: 'free',
@@ -142,6 +151,11 @@ function Home () {
             <Splide
               options={{
                 perPage: 3,
+                breakpoints: {
+                  640: {
+                    perPage: 1
+                  }
+                },
                 arrows: false,
                 pagination: false,
                 drag: 'free',
@@ -186,6 +200,7 @@ const Wrapper = styled.div`
   .splide__list {
     display: flex;
   }
+  overflow:hidden;
 `
 
 const Card = styled.div`

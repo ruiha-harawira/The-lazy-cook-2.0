@@ -48,6 +48,7 @@
     "knex": "^1.0.2",
     "nock": "^13.2.8",
     "pg": "^8.5.1",
+    "react-icons": "^4.4.0",
     "styled-components": "^5.3.5",
     "superagent": "^6.1.0"
   },

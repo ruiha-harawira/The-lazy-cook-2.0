@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   render(
     <Provider store={store}>
       <Router>
-      <App />
+        <App />
       </Router>
     </Provider>,
     document.getElementById('app')
