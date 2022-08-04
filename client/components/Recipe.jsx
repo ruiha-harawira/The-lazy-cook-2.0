@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { removeRecipe } from '../actions/index'
 
-function Recipe () {
+function Recipe() {
   const dispatch = useDispatch()
   const { id } = useParams()
   const recipes = useSelector((state) => state.recipe)
   const data = recipes.find((element) => {
-    return element.id === id
+    return element.id == id
   })
   return (
     <>

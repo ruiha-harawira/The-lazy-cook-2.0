@@ -104,7 +104,9 @@ ul{
   border-top: 2px solid rgb(255, 255, 255);
 }
 
-
+.search{
+ display: contents;
+}
 
 .search form {
   background-color: white;
@@ -113,7 +115,7 @@ ul{
   border: 1px solid currentColor;
   border-radius: 40px;
   margin-left:25vw;
-  // margin-top: -70px;
+  margin-top: -50px;
   width:50vw;
   height:5vh;
   position: relative;
@@ -137,7 +139,7 @@ ul{
   border: none;
   margin: 0;
   padding: 2px;
-  font-size: 30px;
+  font-size: 20px;
   color: inherit;
   border: none;
   border-radius: inherit;
@@ -175,7 +177,6 @@ ul{
   display: none;
   
 }
-
 
 a {
   text-decoration: none;
@@ -483,77 +484,77 @@ padding-top:30%;
 }
 
 @media screen and (max-width:390px) {
-.nav{
-  width: 100wh;
+  .nav{
+    width: 100wh;
+  }
+  .nav p{
+    display: inline-flex;
+    padding:2px;
+  }
+  .banner h2{
+    font-size: 75px;
+    margin-top: 25%;
+  }
+  .search form{
+    margin-top:-190px;
+  }
+  .header{
+    height: 0;
+    position: inherit;
+    width: 100vw;
+    align-items: center;
+  }
+  .background {
+    height: 100vh;
+    margin-top: -10vh;
+  }
+  .nav-menu{
+    z-index: 9;
+  }
+  .hamburger{
+    display: initial;
+    z-index: 10;
+  }
+  fieldset {
+    border: 3px solid black;
+    background-color: #fdddb8;
+    width: auto;
+    text-align: center;
+  }
+  .container .inputbox input {
+    font-size: 1.2em;
+    background-color: white;
+    margin: 50px;
+    width: fit-content;
+  }
+  .radioinputbox {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    padding-bottom: 8px;
+  
+    margin: -10px 10px 0 10px;
+  }
+  #add{
+    padding-top: 0;
+  }
+  .container .inputboxD input {
+    margin-left: 0;
+    margin-top: 30%;
+  }
+  .container .inputboxD{
+    margin-bottom: 0;
+  }
+  .inputbox input#image {
+    padding: 0;
+    margin: 20% 0;
+    width: inherit;
+  }
+  fieldset button{
+    display: flex;
+    float: right;
+  }
 }
-.nav p{
-  display: inline-flex;
-  padding:2px;
-}
-.banner h2{
-  font-size: 75px;
-  margin-top: 25%;
-}
-.search form{
-  margin-top:-190px;
-}
-.header{
-  height: 0;
-  position: inherit;
-  width: 100vw;
-  align-items: center;
-}
-.background {
-  height: 100vh;
-  margin-top: -10vh;
-}
-.nav-menu{
-  z-index: 9;
-}
-.hamburger{
-  display: initial;
-  z-index: 10;
-}
-fieldset {
-  border: 3px solid black;
-  background-color: #fdddb8;
-  width: auto;
-  text-align: center;
-}
-.container .inputbox input {
-  font-size: 1.2em;
-  background-color: white;
-  margin: 50px;
-  width: fit-content;
-}
-.radioinputbox {
-  display: flex;
-  flex-direction: row;
-  float: left;
-  padding-bottom: 8px;
- 
-  margin: -10px 10px 0 10px;
-}
-#add{
-  padding-top: 0;
-}
-.container .inputboxD input {
-  margin-left: 0;
-  margin-top: 30%;
-}
-.container .inputboxD{
-  margin-bottom: 0;
-}
-.inputbox input#image {
-  padding: 0;
-  margin: 20% 0;
-  width: inherit;
-}
-fieldset button{
-  display: flex;
-  float: right;
-}
- }
 
 
 
@@ -1064,7 +1065,7 @@ width: 70%;
   .header{
     width: 100vw;
     align-items: center;
-    margin-top: 2rem;
+  
   }
   .recipesH1 {
     font-family: 'Square Peg', cursive;
