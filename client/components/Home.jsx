@@ -30,9 +30,11 @@ function Home () {
       <div className="banner">
         <h2>Three ingredients cooking</h2>
         <img src="/images/banner.jpg" className="background" />
-        <p>
+        <div>
+
           <SearchRecipe />
-        </p>
+
+        </div>
 
         <div className="category">
           <button>
@@ -149,13 +151,13 @@ function Home () {
           <Wrapper>
             <h3 id="grains">Grains</h3>
             <Splide
-              options={{
-                perPage: 3,
-                breakpoints: {
-                  640: {
-                    perPage: 1
-                  }
-                },
+             options={{
+              perPage: 3,
+              breakpoints: {
+                640: {
+                  perPage: 1
+                }
+              },
                 arrows: false,
                 pagination: false,
                 drag: 'free',
